@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>
+        {{ page.title }}
+    </title>
+    <link href="/resource/fe/global.css" rel="stylesheet">
+    <link href="/resource/fe/common.css" rel="stylesheet">
+    <script src="/resource/fe/modernizr.foundation.min.js"></script>
+    {{ page.extcss }}
+</head>
+<body>
+
+
+<div class="header">
+    <ul class="nav-bar grid">
+        <li class="has-flyout">
+            <a href="#">样式</a>
+            <a href="#" class="flyout-toggle"><span> </span></a>
+            <ul class="flyout" style="display: none;">
+                <li><a href="button.html">按钮</a></li>
+                <li><a href="fontello.html">字体图标</a></li>
+            </ul>
+        </li>
+
+        <li class="has-flyout">
+            <a href="#">UI组件</a>
+            <a href="#" class="flyout-toggle"><span> </span></a>
+            <ul class="flyout" style="display: none;">
+                <li><a href="index.php?doc=dialog">弹出层</a></li>
+                <li><a href="index.php?doc=tips">提示框</a></li>
+                <li><a href="index.php?doc=formvalidator">表单验证</a></li>
+                <li><a href="index.php?doc=ajax">异步提交</a></li>
+            </ul>
+        </li>
+
+        <li class="has-flyout">
+            <a href="#">库</a>
+            <a href="#" class="flyout-toggle"><span> </span></a>
+            <ul class="flyout" style="display: none;">
+                <li><a href="index.php?doc=baidutemplate">baiduTemplate</a></li>
+                <li><a href="index.php?doc=echarts">echarts</a></li>
+                <li><a href="index.php?doc=unslider">unslider</a></li>
+            </ul>
+        </li>
+
+        <li class="has-flyout">
+            <a href="#">文档</a>
+            <a href="#" class="flyout-toggle"><span> </span></a>
+            <ul class="flyout" style="display: none;">
+                <li><a href="index.php?doc=specification">规范</a></li>
+            </ul>
+        </li>
+
+    </ul>
+</div>
+
+
+<div id="main" class="grid doc-detail">
+    {{ content }}
+</div>
+
+<div class="footer">
+    <div class="grid">
+        <ul class="ft-list unstyled clearfix">
+            <li>
+                <h4>关于平台</h4>
+                <p><a href="/index/join">登录/马上接入</a></p>
+                <p><a href="/solution/traffic">解决方案</a></p>
+                <p><a href="/platform/intro">OneNET平台</a></p>
+            </li>
+            <li>
+                <h4>支持</h4>
+                <p><a href="/develop/doc/api/restfullist">API文档</a></p>
+                <p><a href="/develop/doc/api/restfullist">接入SDK</a></p>
+            </li>
+            <li>
+                <h4>友情链接</h4>
+                <p><a target="_blank" href="http://iot.10086.cn/">中移物联网</a></p>
+                <p><a target="_blank" href="http://iot.10086.cn/2013-12-20/1387367454797.html">物联网专网</a></p>
+                <p><a target="_blank" href="http://www.koostore.com/">酷店</a></p>
+            </li>
+            <li>
+                <h4>联系我们</h4>
+                <p><a href="mailto:onenet_service@iot.chinamobile.com"><i class="icon-mail"></i>onenet_service@iot.chinamobile.com</a></p>
+                <p><a href="http://j.map.baidu.com/RyXtk" target="_blank"><i class="icon-location"></i>重庆市南岸区玉马路8号</a></p>
+            </li>
+
+        </ul>
+        <div class="ft-logo"></div>
+        <div class="ft-extend">
+            <p>
+                <a href="/platform/intro">关于OneNET</a>
+                <a href="#">隐私政策</a>
+                <a href="#">免责声明</a>
+                <a href="mailto:onenet_service@iot.chinamobile.com">联系我们</a>
+            </p>
+            <p>
+                中移物联网有限公司 版权所有 Copyright(c)2014 www.heclouds.com
+                渝ICP备13005647号-6
+            </p>
+        </div>
+    </div>
+</div>
+
+<script src="/resource/fe/global.js"></script>
+<script src="/resource/fe/prettify.js"></script>
+
+<script>
+    (function(){
+        $(function() {
+            $('pre').addClass('prettyprint');
+            prettyPrint();
+        });
+    })();
+</script>
+{{ page.extjs }}
+</body>
+</html>
