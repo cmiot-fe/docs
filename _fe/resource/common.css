@@ -1,0 +1,173 @@
+body{
+    font-family: "Microsoft YaHei", sans-serif;
+}
+body *{
+    font-family: "Microsoft YaHei", sans-serif;
+}
+
+a{
+    color: #2ba6cb;
+    text-decoration: none;
+}
+
+.doc-detail h1, .doc-detail h2, .doc-detail h3, .doc-detail h4, .doc-detail h5, .doc-detail h6 {
+    margin: 1em 0;
+    font-weight: 400;
+}
+
+.doc-detail hr {
+    height: 1px;
+    border: 0;
+    color: #CCCCCC;
+    background-color: #eee;
+}
+
+.doc-detail p, .doc-detail blockquote, .doc-detail ul, .doc-detail ol, .doc-detail dl, .doc-detail li, .doc-detail table, .doc-detail pre {
+    margin: 15px 0;
+}
+
+.doc-detail p{
+    line-height: 2em;
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.doc-detail pre {
+    background-color: #F8F8F8;
+    overflow: auto;
+    padding: 15px;
+}
+
+.doc-detail pre.prettyprint{
+    border: 0 none;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.doc-detail pre code {
+    background-color: #F8F8F8;
+    border: none;
+    padding: 0;
+    font-size: 14px;
+    color: #555;
+    font-weight: 100;
+    line-height: 2em;
+}
+
+.doc-detail pre > code {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+code {
+    color: #fe0088;
+    padding: 0 0.2em;
+    line-height: 1.5em;
+    background: transparent;
+}
+
+.doc-detail table{
+    border-radius: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+}
+.doc-detail thead, .doc-detail tfoot{
+    background: #eee;
+}
+.doc-detail th,.doc-detail td{
+    border: 1px solid #ddd;
+}
+.doc-detail tr:nth-child(even) {
+    background: #eee;
+}
+
+
+
+::-moz-selection{background:rgba(255,255,0,0.3);color:#000}
+::selection{background:rgba(255,255,0,0.3);color:#000}
+
+a::-moz-selection{background:rgba(255,255,0,0.3);color:#0645ad}
+a::selection{background:rgba(255,255,0,0.3);color:#0645ad}
+
+.doc-detail blockquote{
+    color:#666666;
+    margin:0;
+    padding: 0.5em 0 0.5em 2em;
+}
+.doc-detail blockquote p{
+    margin: 0;
+}
+
+
+.doc-detail ul, .doc-detail ol {
+    padding: 5px 2em;
+    background-color: #F9F9F9;
+}
+.doc-detail li p:last-child { margin:0 }
+.doc-detail dd { margin: 0 0 0 2em; }
+
+.doc-detail img {
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+    vertical-align: middle;
+    max-width:100%;
+    display: block;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+/* Pretty printing styles. Used with prettify.js. */
+
+/* SPAN elements with the classes below are added by prettyprint. */
+.pln { color: #000 }  /* plain text */
+
+@media screen {
+    .str { color: #080 }  /* string content */
+    .kwd { color: #008 }  /* a keyword */
+    .com { color: #800 }  /* a comment */
+    .typ { color: #606 }  /* a type name */
+    .lit { color: #066 }  /* a literal value */
+    /* punctuation, lisp open bracket, lisp close bracket */
+    .pun, .opn, .clo { color: #660 }
+    .tag { color: #008 }  /* a markup tag name */
+    .atn { color: #606 }  /* a markup attribute name */
+    .atv { color: #080 }  /* a markup attribute value */
+    .dec, .var { color: #606 }  /* a declaration; a variable name */
+    .fun { color: red }  /* a function name */
+}
+
+/* Use higher contrast and text-weight for printable form. */
+@media print, projection {
+    .str { color: #060 }
+    .kwd { color: #006; font-weight: bold }
+    .com { color: #600; font-style: italic }
+    .typ { color: #404; font-weight: bold }
+    .lit { color: #044 }
+    .pun, .opn, .clo { color: #440 }
+    .tag { color: #006; font-weight: bold }
+    .atn { color: #404 }
+    .atv { color: #060 }
+}
+
+/* Put a border around prettyprinted code snippets. */
+pre.prettyprint { padding: 2px; border: 1px solid #888 }
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums { margin-top: 0; margin-bottom: 0 } /* IE indents via margin-left */
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L5,
+li.L6,
+li.L7,
+li.L8 { list-style-type: none }
+/* Alternate shading for lines */
+li.L1,
+li.L3,
+li.L5,
+li.L7,
+li.L9 { background: #eee }
