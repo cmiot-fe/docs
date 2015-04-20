@@ -3,14 +3,30 @@
   title: 按钮
 ---
 
-## 按钮
+# 按钮
 
-echarts是一个图表引擎，使用echarts可以生成各种各样的图表。
 
-官网：http://echarts.baidu.com/
+### 大小
 
-引入方法：&lt;script src="/common/js/module/echarts-plain.js"&gt;&lt;/script&gt;
+<a class="tiny button" href="#">最小</a><br><br>
+<a class="small button" href="#">较小</a><br><br>
+<a class="button" href="#">正常</a><br><br>
+<a class="large button" href="#">最大</a>
 
-### 使用方法
 
-请参考官网
+### 类型
+
+<a class="button" href="#">正常</a><br><br>
+<a class="secondary button" href="#">次要</a><br><br>
+<a class="success button" href="#">成功</a><br><br>
+<a class="alert button" href="#">警告</a><br><br>
+<a class="important button" href="#">重要</a><br><br>
+<a class="hollow button" href="#">空心</a><br><br>
+<a class="disabled button" href="#">不可用</a><br><br>
+
+### 风格
+
+<a class="button" href="#">正常</a><br><br>
+<a class="square button" href="#">方正</a><br><br>
+<a class="round button" href="#">椭圆</a>
+
