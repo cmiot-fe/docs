@@ -1,9 +1,9 @@
 ---
   layout: fe
-  title: 规范
+  title: 设备云smarty书写规范
 ---
 
-## Smarty
+## 设备云smarty书写规范
 
 ### Smarty语法
 
