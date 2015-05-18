@@ -47,7 +47,7 @@ form标签禁止嵌套form。 `*`
 
 area, base, basefont, br, col, frame, hr, input, img, link, meta, param，此类标签为自闭合标签，写法&lt;tagname /&gt;
 
-其他都是非自闭合标签，写法&lt;tagname&lt;&lt;/tagname&lt;
+其他都是非自闭合标签，写法&lt;tagname&gt;&lt;/tagname&gt;
 
 ### 标签语义
 
