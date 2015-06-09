@@ -5,6 +5,37 @@ body *{
     font-family: "Microsoft YaHei", sans-serif;
 }
 
+/*header*/
+.nav-bar{
+
+}
+.nav-bar a{
+    font-size: 18px;
+}
+.nav-bar > li{
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+}
+.nav-bar > li:hover{
+    background: #F6F6F6;
+}
+.nav-bar > li:hover .flyout{
+    display: block;
+}
+.nav-bar .flyout{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -1px;
+    width: 10em;
+    background: #F6F6F6;
+}
+.nav-bar .flyout li{
+    display: block;
+    line-height: 2em;
+}
+
 a{
     color: #2ba6cb;
     text-decoration: none;
