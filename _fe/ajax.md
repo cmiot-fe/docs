@@ -49,7 +49,7 @@ IOT.post与$.post的参数一样，但是对于callback，如果提交不成功�
             if(res.code == 0){ //添加成功
                 IOT.tips('添加成功', 'success', '2000');
             }else{
-                IOT.tips('添加失败,请稍后再试' + (res.msg || ''), 'error');
+                IOT.showPostError(res.msg); //显示错误信息。res.msg可能是字符串也可能是类似{password: "'密码' 不能为空"}的object。showPostError都可以处理这些错误信息并可以做到前后端统一验证
                 IOT.button.removeLoading($submitButton, '确定');
             }
         }, 'json');
