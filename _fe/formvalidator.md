@@ -3,7 +3,17 @@
   title: 表单验证组件
 ---
 
-## 表单验证组件
+
+# 表单验证组件
+
+## `OneNet2.0已经使用parsleyjs作为表单验证组件，[官方网站](http://parsleyjs.org/)，[DEMO](http://parsleyjs.org/doc/index.html)`
+
+## parsleyjs已经打包到公用js文件里，无需单独引入
+
+
+##
+
+## 以下为OneNet1.0版本使用的组件
 
 我们使用formvalidator作为表单验证组件，[官方网站](http://formvalidator.net)
 

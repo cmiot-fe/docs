@@ -1,7 +1,6 @@
 ---
   layout: fe
   title: Dialog弹出窗模块
-  extjs:  <script src="resource/dialog.js"></script>
 ---
 
 <style>
@@ -21,10 +20,10 @@ Dialog模块是公用模块，默认已经打包到公用js文件里，无需单
 
     var dialog = new IOT.Dialog({
         title: '系统提示', //窗口标题的html，如果不设置则无标题
-        content: '&lt;div class="ui-dialog-bd">&lt;p>欢迎！&lt;/p>&lt;/div>&lt;div class="ui-dialog-btn">&lt;a class="button j_dlg_close">关闭&lt;/a>&lt;/div>',
+        content: '<div class="ui-dialog-bd"><p>欢迎！</p></div>',
         //窗口内容的html，必须是html格式不能是无格式纯文本，如果不设置则无内容
         beforeClose: null, //调用close方法时执行的callback，如果此callback返回false则会阻止窗口的关闭
-        closeBtn: true, //是否有右上角关闭按钮
+        showClose: true,showFooter: true,
         className: '', //窗口最外层容器的类名
         cache: true, //是否缓存。若为false则close()的时候会remove掉对话框对应的dom元素
         width: '40%' //窗口宽度，如不传递默认为40%
@@ -72,13 +71,16 @@ Dialog.confirm可以弹出一个具有确认和取消按钮的对话框。
     function openDialog(){
         var dialog = new IOT.Dialog({
             title: '系统提示', //窗口标题的html，如果不设置则无标题
-            content: '<div class="ui-dialog-bd"><p>欢迎！</p></div><div class="ui-dialog-btn"><a class="button j_dlg_close">关闭<a></div>', //窗口内容的html，如果不设置则无内容
+            content: '<div class="ui-dialog-bd"><p>欢迎！</p></div>',
+            //窗口内容的html，必须是html格式不能是无格式纯文本，如果不设置则无内容
             beforeClose: null, //调用close方法时执行的callback，如果此callback返回false则会阻止窗口的关闭
-            closeBtn: true, //是否有关闭按钮
+            showClose: true,showFooter: true,
             className: '', //窗口最外层容器的类名
             cache: true, //是否缓存。若为false则close()的时候会remove掉对话框对应的dom元素
-            width: '40%' //窗口宽度，默认为40%
+            width: '40%' //窗口宽度，如不传递默认为40%
         });
+
+        //打开窗口
         dialog.open();
     }
     function confirmDialog(){
