@@ -24,6 +24,10 @@ IOT.post与$.post的参数一样，但是对于callback，如果提交不成功�
 
 > 使用IOT.isLoading(`按钮对应的jqueryDom`)来判断提交状态
 
+### 错误信息处理
+
+> IOT.showPostError(res.msg);显示错误信息。因为res.msg可能是字符串也可能是类似{password: "'密码' 不能为空"}的object。showPostError都可以处理这些错误信息并可以做到前后端统一验证
+
 
 ## 使用方法
 
