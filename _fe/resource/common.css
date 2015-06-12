@@ -7,7 +7,7 @@ body *{
 
 /*header*/
 .nav-bar{
-
+    z-index: 100;
 }
 .nav-bar a{
     font-size: 18px;
