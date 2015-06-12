@@ -9,6 +9,38 @@
     }
 </style>
 
+<div data-alert="" class="alert-box">
+    This is a standard alert.
+    <a href="#" class="close">×</a>
+</div>
+
+
+
+<div data-alert="" class="alert-box success radius">
+    This is a success alert with a radius.
+    <a href="#" class="close">×</a>
+</div>
+
+<div data-alert="" class="alert-box warning round">
+    This is a warning alert that is rounded.
+    <a href="#" class="close">×</a>
+</div>
+
+<div data-alert="" class="alert-box info radius">
+    This is an info alert with a radius.
+    <a href="#" class="close">×</a>
+</div>
+
+<div data-alert="" class="alert-box alert round">
+    This is an alert - alert that is rounded.
+    <a href="#" class="close">×</a>
+</div>
+
+<div data-alert="" class="alert-box secondary">
+    This is a secondary alert.
+    <a href="#" class="close">×</a>
+</div>
+
 ## IOT.tips方法
 
 使用IOT.tips可以在页面弹出一个提示。
