@@ -2,7 +2,11 @@
   layout: fe
   title: 按钮
 ---
-
+<style>
+    .doc-detail p .button{
+        line-height: 1em;
+    }
+</style>
 # 按钮
 
 
@@ -17,6 +21,7 @@
 ### 类型
 
 <a class="button" href="#">正常</a><br><br>
+<a class="blue button" href="#">蓝色</a><br><br>
 <a class="secondary button" href="#">次要</a><br><br>
 <a class="success button" href="#">成功</a><br><br>
 <a class="alert button" href="#">警告</a><br><br>
@@ -28,5 +33,5 @@
 
 <a class="button" href="#">正常</a><br><br>
 <a class="square button" href="#">方正</a><br><br>
-<a class="round button" href="#">椭圆</a>
+<a class="radius button" href="#">椭圆</a>
 
