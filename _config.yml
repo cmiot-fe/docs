@@ -1,3 +1,5 @@
 collections:
   fe:
       output: true
+  team:
+      output: true
