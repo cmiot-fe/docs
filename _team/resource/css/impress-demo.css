@@ -243,7 +243,7 @@ a:focus {
 
 }
 #data ul li {
-    margin: 40px;
+    margin: 20px;
     /*margin-bottom: 40px;*/
     /*border: 5px solid red;*/
     padding: 0 20px;
@@ -273,12 +273,12 @@ a:focus {
 }
 #project_robot ul li {
     float: left;
-    width: 35%;
+    width: 30%;
     margin-right: 20px;
 }
 #project_robot ul li.third {
     float: none;
-    width: 72%;
+    width: 63%;
 }
 #project_indp_yongao ul li {
     float: left;
