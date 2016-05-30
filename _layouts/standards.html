@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>
+        {{ page.title }}
+    </title>
+    <link href="resource/global.css" rel="stylesheet">
+    <link href="resource/common.css" rel="stylesheet">
+    <link href="resource/fontello.css" rel="stylesheet">
+    {{ page.extcss }}
+    <script>
+        var IOT = {};
+    </script>
+</head>
+<body>
+
+
+<div class="header">
+</div>
+
+
+<div id="main" class="grid doc-detail">
+    {{ content }}
+</div>
+<script src="resource/global.js"></script>
+<script src="resource/prettify.js"></script>
+
+<script>
+    (function(){
+        $(function() {
+            $('pre').addClass('prettyprint');
+            prettyPrint();
+        });
+    })();
+</script>
+{{ page.extjs }}
+</body>
+</html>

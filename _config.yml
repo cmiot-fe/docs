@@ -3,3 +3,5 @@ collections:
       output: true
   team:
       output: true
+  standards:
+      output: true
