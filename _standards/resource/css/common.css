@@ -1,0 +1,389 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+/* Don't kill focus outline for keyboard users: http://24ways.org/2009/dont-lose-your-focus */
+a:hover, a:active {
+    outline: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body{
+    font-family: "Microsoft YaHei", sans-serif;
+    background-color: #eaeff2;
+}
+body *{
+    font-family: "Microsoft YaHei", sans-serif;
+}
+
+.doc-detail pre {
+    background-color: #F8F8F8;
+    overflow: auto;
+    padding: 15px;
+}
+
+.doc-detail pre.prettyprint{
+    border: 0 none;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.doc-detail pre code {
+    background-color: #F8F8F8;
+    border: none;
+    padding: 0;
+    font-size: 14px;
+    color: #555;
+    font-weight: 100;
+    line-height: 2em;
+}
+
+.doc-detail pre > code {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+code {
+    color: #fe0088;
+    padding: 0 0.2em;
+    line-height: 1.5em;
+    background: transparent;
+}
+
+/* Pretty printing styles. Used with prettify.js. */
+
+/* SPAN elements with the classes below are added by prettyprint. */
+.pln { color: #000 }  /* plain text */
+
+@media screen {
+    .str { color: #080 }  /* string content */
+    .kwd { color: #008 }  /* a keyword */
+    .com { color: #800 }  /* a comment */
+    .typ { color: #606 }  /* a type name */
+    .lit { color: #066 }  /* a literal value */
+    /* punctuation, lisp open bracket, lisp close bracket */
+    .pun, .opn, .clo { color: #660 }
+    .tag { color: #008 }  /* a markup tag name */
+    .atn { color: #606 }  /* a markup attribute name */
+    .atv { color: #080 }  /* a markup attribute value */
+    .dec, .var { color: #606 }  /* a declaration; a variable name */
+    .fun { color: red }  /* a function name */
+}
+
+/* Use higher contrast and text-weight for printable form. */
+@media print, projection {
+    .str { color: #060 }
+    .kwd { color: #006; font-weight: bold }
+    .com { color: #600; font-style: italic }
+    .typ { color: #404; font-weight: bold }
+    .lit { color: #044 }
+    .pun, .opn, .clo { color: #440 }
+    .tag { color: #006; font-weight: bold }
+    .atn { color: #404 }
+    .atv { color: #060 }
+}
+
+/* Put a border around prettyprinted code snippets. */
+pre.prettyprint { padding: 2px; border: 1px solid #888 }
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums { margin-top: 0; margin-bottom: 0 } /* IE indents via margin-left */
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L5,
+li.L6,
+li.L7,
+li.L8 { list-style-type: none }
+/* Alternate shading for lines */
+li.L1,
+li.L3,
+li.L5,
+li.L7,
+li.L9 { background: #eee }
+
+
+/* Docs for nav */
+.docs-nav {
+    font-family: 'Montserrat', 'Microsoft Yahei', sans-serif;
+    position: fixed;
+    top: 150px;
+    bottom: 0;
+    left: 50%;
+    margin-left: 256px;
+    max-width: 256px;
+    width: 25%;
+    padding: 20px;
+    overflow-y: auto;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.is-onenet .docs-nav .active a {
+    border-left-color: rgba(0, 192, 241, 0.3);
+}
+
+.is-onenet-timezone .docs-nav .active a {
+    border-left-color: rgba(78, 124, 173, 0.3);
+}
+
+.docs-nav a {
+    display: block;
+    text-decoration: none;
+    border-left: 2px solid transparent
+}
+
+.is-onenet .docs-nav a:hover, .is-onenet .docs-nav a.active {
+    background: rgba(0, 192, 241, 0.1);
+    border-left-color: #00c0f1
+}
+
+.is-onenet-timezone .docs-nav a:hover, .is-onenet-timezone .docs-nav a.active {
+    background: rgba(78, 124, 173, 0.1);
+    border-left-color: #4e7cad
+}
+
+.docs-nav-item {
+    padding: 3px 25px
+}
+
+.is-onenet .docs-nav-item {
+    color: #00c0f1
+}
+
+.is-onenet-timezone .docs-nav-item {
+    color: #4e7cad
+}
+
+.docs-nav-section .docs-nav-item {
+    display: none
+}
+
+.docs-nav-section.active .docs-nav-item {
+    display: block
+}
+
+.docs-nav-section-title {
+    color: #222;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 5px 10px
+}
+
+.docs {
+    margin: 0 auto;
+    max-width: 1024px
+}
+
+.docs-content {
+    margin-right: 25%;
+    padding-right: 20px;
+    padding-left: 30px;
+    color: #222
+}
+
+.docs-method-prose p {
+    font-size: 16px;
+    margin: 0 0 10px
+}
+
+.docs-method-prose pre {
+    padding: 5px 10px
+}
+
+.docs-method-prose table {
+    width: 100%;
+    margin-bottom: 20px
+}
+
+.docs-method-prose td, .docs-method-prose th {
+    padding: 3px 10px;
+    background: #fff;
+    text-align: left
+}
+
+.docs-method-prose td {
+    border: 1px solid #dedede
+}
+
+.docs-method-prose th {
+    border: 1px solid #bdbdbd
+}
+
+.docs-method-prose td:nth-of-type(1) {
+    white-space: pre;
+    text-align: right;
+    width: 0
+}
+
+.docs-method-prose td:last-of-type {
+    width: 100%
+}
+
+.docs-method-prose tr:nth-child(odd) td, .docs-method-prose tr:nth-child(odd) th {
+    background: 0
+}
+
+.docs-method-prose ol {
+    counter-reset: li -1;
+    list-style: none;
+    padding-left: 15px
+}
+
+.docs-method-prose ol > li:before {
+    content: counter(li) " ";
+    counter-increment: li;
+    font-weight: bold
+}
+
+.docs-section {
+    padding-top: 40px
+}
+
+.docs-section-title {
+    color: rgba(34, 34, 34, 0.8);
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    font-size: 45px;
+    line-height: 60px;
+    border-radius: 4px;
+    background: url(../img/bg.png) 0 50%;
+    border: 1px solid rgba(34, 34, 34, 0.3)
+}
+
+.is-onenet .docs-section-title {
+    background-color: #00c0f1
+}
+
+.is-onenet-timezone .docs-section-title {
+    background-color: #4e7cad
+}
+
+.docs-section-title a {
+    color: #fff;
+    text-decoration: none
+}
+
+.docs-method {
+    margin: 0 0 60px;
+    position: relative
+}
+
+.docs-method-title {
+    color: rgba(34, 34, 34, 0.8);
+    padding: 0;
+    margin: 0 0 20px;
+    font-size: 30px;
+    line-height: 40px
+}
+
+.docs-method-title a {
+    color: #222;
+    text-decoration: none;
+    position: relative
+}
+
+.docs-method-title a:before {
+    position: absolute;
+    top: 0;
+    right: 100%;
+    padding-right: 10px;
+    display: block;
+    color: rgba(34, 34, 34, 0.1);
+    content: "#";
+    padding-right: 5px
+}
+
+.docs-method-title a:hover {
+    text-decoration: underline
+}
+
+.docs-method-title a:hover:before {
+    color: rgba(34, 34, 34, 0.3)
+}
+
+.docs-method-title span {
+    color: rgba(34, 34, 34, 0.2);
+    font-size: 0.75em
+}
+
+.docs-method-edit {
+    position: absolute;
+    top: 0;
+    right: -20px;
+    line-height: 40px;
+    color: rgba(34, 34, 34, 0.3);
+    text-decoration: none;
+    padding: 0 20px;
+    /*display: block;*/
+    display: none;
+}
+
+.docs-method-edit:hover {
+    color: #222;
+    text-decoration: underline
+}
+
+.docs-method-signature pre {
+    background: rgba(34, 34, 34, 0.2);
+    position: relative
+}
+
+.docs-method-signature pre:after {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    content: "语法";
+    color: rgba(34, 34, 34, 0.3);
+    font-size: 12px
+}
+
+.is-onenet .docs-method-signature pre {
+    border-color: rgba(97, 178, 167, 0.7);
+    background: rgba(97, 178, 167, 0.15)
+}
+
+.is-onenet-timezone .docs-method-signature pre {
+    border-color: rgba(78, 124, 173, 0.7);
+    background: rgba(78, 124, 173, 0.15)
+}

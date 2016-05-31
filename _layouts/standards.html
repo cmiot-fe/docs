@@ -6,26 +6,25 @@
     <title>
         {{ page.title }}
     </title>
-    <link href="resource/global.css" rel="stylesheet">
-    <link href="resource/common.css" rel="stylesheet">
-    <link href="resource/fontello.css" rel="stylesheet">
+    <link href="resource/css/common.css" rel="stylesheet">
+    <link href="resource/css/module.css" rel="stylesheet">
+    <!--<link href="resource/fontello.css" rel="stylesheet">-->
     {{ page.extcss }}
     <script>
         var IOT = {};
     </script>
 </head>
-<body>
-
+<body class="is-onenet">
 
 <div class="header">
 </div>
 
-
 <div id="main" class="grid doc-detail">
     {{ content }}
 </div>
-<script src="resource/global.js"></script>
-<script src="resource/prettify.js"></script>
+<script src="resource/js/jquery-1.11.1.min.js"></script>
+<script src="resource/js/docs.js"></script>
+<script src="resource/js/prettify.js"></script>
 
 <script>
     (function(){
