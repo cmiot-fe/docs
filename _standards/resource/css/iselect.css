@@ -1,13 +1,14 @@
 .i-select {
     /*float: right;*/
     margin-left: 10px;
-    border: 1px solid #999;
+    border: 1px solid #dddee3;
     width: 120px;
     height: 42px;
     line-height: 42px;
     position: relative;
     border-radius: 6px;
     display: inline-block;/*there is no left label => enable*/
+    z-index: 1;
 }
 .i-select.active i {
     color: #00bff0;
@@ -16,8 +17,9 @@
     margin-top: 1px;
     border-radius: 3px;
     padding: 10px 0;
+    margin-left: 10px;
     background-color: #fdfdfd;
-    box-shadow: 0 0 10px #ccc;
+    box-shadow: 0 0 10px rgba(0, 191, 142, .2);
     width: 100%;
     display: none;
 }
@@ -55,6 +57,9 @@
     position: absolute;
     top: 0;
 }
+.search {
+    position: relative;
+}
 .search input {
     line-height: 30px;
     margin: 5px 10px;
@@ -63,8 +68,10 @@
     border: 1px solid #dbdee3;
 }
 .search i {
-    right: 20px;
+    right: 10px;
     line-height: 40px;
+    top: 0;
+    color: #ccc;
 }
 .search-tip {
     color: #333;

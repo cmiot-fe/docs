@@ -16,6 +16,10 @@
             <a class="docs-nav-section-title" href='#/selector/'>Selector</a>
                 <a class="docs-nav-item" href="#/selector/single/">单项选择框</a>
         </div>
+        <div class="docs-nav-section">
+            <a class="docs-nav-section-title" href='#/popTip/'>IOT.tips</a>
+                <a class="docs-nav-item" href="#/popTip/tip/">消息提示框</a>
+        </div>
     </div>
     <div class="docs-content">
         <!-- Color -->
@@ -112,13 +116,21 @@
                     </h3>
                     <a class="docs-method-edit" href="javascript:;" target="_blank">编辑</a>
                 <div class="docs-method-prose">
+                    <p>选择框，这里主要还是模拟UI效果，替换原生的select样式</p>
+                    <br>
+                    <br>
                     <div id="s-selector" class="single-selector">
+                        <p>● 一种是普通的</p>
                         性别
                         <select name="sex" id="selector-sex">
                             <option value="male">male</option>
                             <option value="female">female</option>
                             <option value="33">33</option>
                         </select>
+                        <br>
+                        <br>
+                        <br>
+                        <p>● 一种是带搜索框的</p>
                         省份
                         <select name="province" id="selector-province">
                             <option value="1">北京</option>
@@ -185,11 +197,11 @@
                             <option value="3">ooxx</option>
                         </select>
                     </div>
-```javascript
-<div class="all">
-	<select>...</select>
-</div>
-<script>
+                    <pre>
+&lt;div class="all">
+	&lt;select>...&lt;/select>
+&lt;/div>
+&lt;script>
 $('select').iselect({
     icon: 'icon-angle-down',    // change your icon
     hasSearch: false,           // enable search input
@@ -199,17 +211,50 @@ $('select').iselect({
         data: {}
     }
 });
-</script>
-```
+&lt;/script>
+                    </pre>
                     <script type="text/javascript">
                         $(function () {
                             $('#selector-sex').iselect();
                             $('#selector-province').iselect({
                                 hasSearch: true,
-                                searchIcon: 'icon-search'
+                                searchData: {
+                                    url: 'resource/data/data.json',
+                                    method: 'GET'
+                                }
                             });
                         });
                     </script>
+                </div>
+            </article>
+        <!-- PopTip -->
+        <article class="docs-section">
+            <a class="docs-section-target" id="/popTip/" name="/popTip/"></a>
+            <h2 class="docs-section-title"><a href='#/popTip/'>IOT.tips</a></h2>
+        </article>
+            <article class="docs-method">
+                <a class="docs-method-target" id="/popTip/intro/"  name="/popTip/intro/"></a>
+                <div class="docs-method-prose">
+                    <p>使用IOT.tips可以在页面弹出一个提示。</p>
+                </div>
+            </article>
+            <article class="docs-method">
+                <a class="docs-method-target" id="/popTip/tip/"  name="/popTip/tip/"></a>
+                    <h3 class="docs-method-title">
+                        <a href='#/popTip/tip/'>IOT.tips 使用方法</a>
+                    </h3>
+                    <a class="docs-method-edit" href="javascript:;" target="_blank">编辑</a>
+                <div class="docs-method-prose">
+                    
+                
+                    <pre>
+/**
+* @param content {String}  弹出内容
+* @param [type] {String} 内容类型 支持success/error/warning/info，默认success
+* @param [timeout] {String} 弹层出现的时间，单位为毫秒，默认3000
+*/
+IOT.tips(content, type, timeout);
+                    </pre>
                 </div>
             </article>
     </div>
