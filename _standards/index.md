@@ -162,7 +162,9 @@
                     </h3>
                     <a class="docs-method-edit" href="javascript:;" target="_blank">编辑</a>
                 <div class="docs-method-prose">
-                    <p><a class="button expand icon-search"><span>测试 expand</span></a></p>
+                    <p><a class="button expand icon-search"><span>测试 expand</span></a>&nbsp;&nbsp;<a class="button expand icon-search"><span>测试 expand</span></a></p>
+                    <p><a class="button expand icon-search"><span>测试 expand</span></a>&nbsp;&nbsp;<a class="button expand icon-search"><span>测试 expand</span></a></p>
+                    <p><a class="button expand icon-search"><span>测试 expand</span></a>&nbsp;&nbsp;<a class="button expand icon-search"><span>测试 expand</span></a></p>
                 </div>
             </article>
             <article class="docs-method">

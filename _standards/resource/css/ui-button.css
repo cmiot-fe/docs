@@ -63,31 +63,26 @@
     -webkit-border-radius: 14px;
     -moz-border-radius: 14px;
     border-radius: 14px;
-    width: 60px;
     height: 28px;
     padding: 0 15px;
     display: inline-block;
-    -webkit-transition: all .05s ease-in;
-    -moz-transition: all .05s ease-in;
-    transition: all .05s ease-in;
+    -webkit-transition: all .2s ease-in;
+    -moz-transition: all .2s ease-in;
+    transition: all .2s ease-in;
     line-height: 28px;
     text-align: left;
 }
 .button.expand span {
-    display: inline-block;
-    position: absolute;
+    display: none;
     opacity: 0;
-    -webkit-transition: all 0s ease-in .01s;
-    -moz-transition: all 0s ease-in .01s;
-    transition: all 0s ease-in .01s;
-}
-.button.expand:hover {
-    width: 100%;
+    -webkit-transition: all .2s ease-in;
+    -moz-transition: all .2s ease-in;
+    transition: all .2s ease-in;
 }
 .button.expand:hover span {
     display: inline-block;
     opacity: 1;
 }
-.button.expand:active {
+.button.expand.hollow {
 
 }
