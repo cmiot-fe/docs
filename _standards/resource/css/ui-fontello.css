@@ -204,4 +204,8 @@
 .icon-wechat:before { content: '\e843'; } /* '' */
 .icon-weibo:before { content: '\e844'; } /* '' */
 .icon-resize-small-alt:before { content: '\e845'; } /* '' */
+/* special icon button */
 .icon-eye:before { content: '\e846'; } /* '' */
+.icon-eye:hover:before { content: '\e843'; }
+.icon-eye:active:before { content: '\e83d'; }
+.icon-eye[disabled]:hover:before, .icon-eye[disabled]:active:before, .icon-eye[disabled]:before { content: '\e846'; color: #ccc; cursor: not-allowed; }

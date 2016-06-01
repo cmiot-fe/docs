@@ -1,0 +1,93 @@
+.button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    font-family: "Microsoft YaHei", sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    background-color: #00c0f1;
+    color: #fff;
+    border-width: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding: 16px 25px;
+    line-height: 1em;
+    -webkit-transition: all .2s ease-in;
+    -moz-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+    /*ie里没有设置line-height的默认值为1，会导致继承父类height从而出现过高的问题*/
+    /*类型*/
+    /*大小*/
+    /*风格*/
+}
+.button:hover {
+    background-color: #40d8ff;
+    color: #fff;
+}
+.button:active {
+    background-color: #0ba2f1;
+    color: #fff;
+}
+.button[disabled] {
+    background-color: #e3e3e3;
+    color: #b9b9b9;
+    cursor: not-allowed;
+}
+.button.huge {
+    padding: 21px 0;
+    width: 394px;
+}
+.button.secondary {
+    border: 1px solid #7a7e89;
+    background-color: #fff;
+    color: #7a7e89;
+}
+.button.secondary:hover {
+    background-color: #b1b7c7;
+    color: #fff;
+}
+.button.secondary:active {
+    background-color: #7a7e89;
+    color: #fff;
+}
+.button.secondary[disabled] {
+    background-color: #e3e3e3;
+    color: #b9b9b9;
+    cursor: not-allowed;
+}
+.button.expand {
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+    border-radius: 14px;
+    width: 60px;
+    height: 28px;
+    padding: 0 15px;
+    display: inline-block;
+    -webkit-transition: all .05s ease-in;
+    -moz-transition: all .05s ease-in;
+    transition: all .05s ease-in;
+    line-height: 28px;
+    text-align: left;
+}
+.button.expand span {
+    display: inline-block;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: all 0s ease-in .01s;
+    -moz-transition: all 0s ease-in .01s;
+    transition: all 0s ease-in .01s;
+}
+.button.expand:hover {
+    width: 100%;
+}
+.button.expand:hover span {
+    display: inline-block;
+    opacity: 1;
+}
+.button.expand:active {
+
+}

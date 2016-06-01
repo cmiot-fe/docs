@@ -13,6 +13,13 @@
                 <a class="docs-nav-item" href="#/color/tip/">提示性图标</a>
         </div>
         <div class="docs-nav-section">
+            <a class="docs-nav-section-title" href='#/btn/'>Button</a>
+                <a class="docs-nav-item" href="#/btn/normal/">常规按钮</a>
+                <a class="docs-nav-item" href="#/btn/icon/">icon按钮</a>
+                <a class="docs-nav-item" href="#/btn/expandBtn/">expand按钮</a>
+                <a class="docs-nav-item" href="#/btn/search/">搜索按钮</a>
+        </div>
+        <div class="docs-nav-section">
             <a class="docs-nav-section-title" href='#/selector/'>Selector</a>
                 <a class="docs-nav-item" href="#/selector/single/">单项选择框</a>
         </div>
@@ -22,7 +29,7 @@
         </div>
     </div>
     <div class="docs-content">
-        <!-- Color -->
+        <!-- ***************** Color ************************** -->
         <article class="docs-section">
             <a class="docs-section-target" id="/color/" name="/color/"></a>
             <h2 class="docs-section-title"><a href='#/color/'>Color</a></h2>
@@ -98,6 +105,80 @@
                     </div>
                 </div>
             </article>
+        <!-- ****************************************************************************************** -->
+        
+        <!-- ***************** Button ************************** -->
+        <article class="docs-section">
+            <a class="docs-section-target" id="/btn/" name="/btn/"></a>
+            <h2 class="docs-section-title"><a href='#/btn/'>Button</a></h2>
+        </article>
+            <article class="docs-method">
+                <a class="docs-method-target" id="/btn/intro/"  name="/btn/intro/"></a>
+                <div class="docs-method-prose">
+                    <p>按钮参考 UI</p>
+                </div>
+            </article>
+            <article class="docs-method">
+                <a class="docs-method-target" id="/btn/normal/"  name="/btn/normal/"></a>
+                    <h3 class="docs-method-title">
+                        <a href='#/btn/normal/'>Normal Button</a>
+                    </h3>
+                    <a class="docs-method-edit" href="javascript:;" target="_blank">编辑</a>
+                <div class="docs-method-prose">
+                    <p><a class="button huge">登录按钮 或 展示按钮</a></p>
+                    <p><a class="button">普通按钮</a></p>
+                    <p><a class="button secondary">次要按钮</a></p>
+                    <p><a class="button huge" disabled>登录按钮 或 展示按钮 禁用</a>&nbsp;&nbsp;<a class="button" disabled>禁用状态</a></p>
+<pre>
+&lt;a class="button huge">登录按钮 或 展示按钮&lt;/a>
+&lt;a class="button">普通按钮&lt;/a>
+&lt;a class="button secondary">次要按钮&lt;/a>
+&lt;a class="button huge" disabled>登录按钮 或 展示按钮 禁用&lt;/a>&nbsp;&nbsp;
+&lt;a class="button" disabled>禁用状态&lt;/a>
+</pre>
+                    
+                </div>
+            </article>
+            <article class="docs-method">
+                <a class="docs-method-target" id="/btn/icon/"  name="/btn/icon/"></a>
+                    <h3 class="docs-method-title">
+                        <a href='#/btn/icon/'>Icon Button</a>
+                    </h3>
+                    <a class="docs-method-edit" href="javascript:;" target="_blank">编辑</a>
+                <div class="docs-method-prose">
+                    <p>icon 按钮是系统特殊的按钮，不需要做另外的处理，引入 class 类即可</p>
+                    <p><i class="icon-eye"></i></p>
+                    <p><i class="icon-eye" disabled></i></p>
+<pre>
+&lt;i class="icon-eye">&lt;/i>
+&lt;i class="icon-eye" disabled>&lt;/i>
+</pre>
+                </div>
+            </article>
+            <article class="docs-method">
+                <a class="docs-method-target" id="/btn/expandBtn/"  name="/btn/expandBtn/"></a>
+                    <h3 class="docs-method-title">
+                        <a href='#/btn/expandBtn/'>Expand Button</a>
+                    </h3>
+                    <a class="docs-method-edit" href="javascript:;" target="_blank">编辑</a>
+                <div class="docs-method-prose">
+                    <p><a class="button expand icon-search"><span>测试 expand</span></a></p>
+                </div>
+            </article>
+            <article class="docs-method">
+                <a class="docs-method-target" id="/btn/search/"  name="/btn/search/"></a>
+                    <h3 class="docs-method-title">
+                        <a href='#/btn/search/'>Search Button</a>
+                    </h3>
+                    <a class="docs-method-edit" href="javascript:;" target="_blank">编辑</a>
+                <div class="docs-method-prose">
+                    <div id="colorBgAndBtn" class="color-block">
+                        
+                    </div>
+                </div>
+            </article>
+        <!-- ****************************************************************************************** -->
+        
         <!-- Selector -->
         <article class="docs-section">
             <a class="docs-section-target" id="/selector/" name="/selector/"></a>
@@ -197,7 +278,7 @@
                             <option value="3">ooxx</option>
                         </select>
                     </div>
-                    <pre>
+<pre>
 &lt;div class="all">
 	&lt;select>...&lt;/select>
 &lt;/div>
@@ -212,7 +293,7 @@ $('select').iselect({
     }
 });
 &lt;/script>
-                    </pre>
+</pre>
                     <script type="text/javascript">
                         $(function () {
                             $('#selector-sex').iselect();
@@ -247,14 +328,14 @@ $('select').iselect({
                 <div class="docs-method-prose">
                     
                 
-                    <pre>
+<pre>
 /**
 * @param content {String}  弹出内容
 * @param [type] {String} 内容类型 支持success/error/warning/info，默认success
 * @param [timeout] {String} 弹层出现的时间，单位为毫秒，默认3000
 */
 IOT.tips(content, type, timeout);
-                    </pre>
+</pre>
                 </div>
             </article>
     </div>
