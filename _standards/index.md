@@ -14,7 +14,7 @@
         </div>
         <div class="docs-nav-section">
             <a class="docs-nav-section-title" href='#/selector/'>Selector</a>
-                <a class="docs-nav-item" href="#/selector/font/">单项选择框</a>
+                <a class="docs-nav-item" href="#/selector/single/">单项选择框</a>
         </div>
     </div>
     <div class="docs-content">
@@ -103,6 +103,113 @@
                 <a class="docs-method-target" id="/selector/intro/"  name="/selector/intro/"></a>
                 <div class="docs-method-prose">
                     <p>选择框，在系统中也是经常使用的。</p>
+                </div>
+            </article>
+            <article class="docs-method">
+                <a class="docs-method-target" id="/selector/single/"  name="/selector/single/"></a>
+                    <h3 class="docs-method-title">
+                        <a href='#/selector/single/'>Single Selector</a>
+                    </h3>
+                    <a class="docs-method-edit" href="javascript:;" target="_blank">编辑</a>
+                <div class="docs-method-prose">
+                    <div id="s-selector" class="single-selector">
+                        性别
+                        <select name="sex" id="selector-sex">
+                            <option value="male">male</option>
+                            <option value="female">female</option>
+                            <option value="33">33</option>
+                        </select>
+                        省份
+                        <select name="province" id="selector-province">
+                            <option value="1">北京</option>
+                            <option value="2" selected="selected">重庆</option>
+                            <option value="3">天津</option>
+                            <option value="3">上海</option>
+                            <option value="3">万州</option>
+                            <option value="3">瑞池</option>
+                            <option value="3">响水</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                            <option value="3">ooxx</option>
+                        </select>
+                    </div>
+```javascript
+<div class="all">
+	<select>...</select>
+</div>
+<script>
+$('select').iselect({
+    icon: 'icon-angle-down',    // change your icon
+    hasSearch: false,           // enable search input
+    searchIcon: '',             // select your search icon
+    searchData: {               
+        url: '',                // request url
+        data: {}
+    }
+});
+</script>
+```
+                    <script type="text/javascript">
+                        $(function () {
+                            $('#selector-sex').iselect();
+                            $('#selector-province').iselect({
+                                hasSearch: true,
+                                searchIcon: 'icon-search'
+                            });
+                        });
+                    </script>
                 </div>
             </article>
     </div>
