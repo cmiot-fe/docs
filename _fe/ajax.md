@@ -5,6 +5,12 @@
 
 ## IOT.post
 
+默认的异步提交timeout为15S，如果需要修改，请调用
+
+    $.ajaxSetup({
+        timeout: 15000
+    });
+
 使用IOT.post静态方法发起一次异步提交。
 
 IOT.post是公共函数，默认已经打包到公用js文件里，无需单独引入
@@ -12,7 +18,7 @@ IOT.post是公共函数，默认已经打包到公用js文件里，无需单独�
 
 ## 与$.post的差异
 
-IOT.post与$.post的参数一样，但是对于callback，如果提交不成功，$.post会调用fail方法的callback，而IOT.post依然会调用本身的callback，此时传递给callback的参数为false，详见下面例子
+IOT.post与$.post的参数一样，但是对于callback，如果提交不成功，$.post会调用fail方法的callback，而IOT.post依然会调用本身的callback，此时传递给callback的参数为false，详见例子
 
 ### 防止重复提交
 
