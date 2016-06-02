@@ -35,8 +35,13 @@
                 <a class="docs-nav-item" href="#/tooltip/atitle/">提示工具</a>
         </div>
         <div class="docs-nav-section">
-            <a class="docs-nav-section-title" href='#/popTip/'>IOT.tips</a>
+            <a class="docs-nav-section-title" href='#/popTip/'>Tips</a>
                 <a class="docs-nav-item" href="#/popTip/tip/">消息提示框</a>
+        </div>
+        <div class="docs-nav-section">
+            <a class="docs-nav-section-title" href='#/page/'>Pagination</a>
+                <a class="docs-nav-item" href="#/page/smarty/">分页smarty</a>
+                <a class="docs-nav-item" href="#/page/js/">分页js</a>
         </div>
     </div>
     <div class="docs-content">
@@ -556,6 +561,84 @@ IOT.tips(content, type, timeout);
                 </div>
             </article>
         <!-- ****************************************************************************************** -->
-        
+        <!-- pager -->
+        <article class="docs-section">
+            <a class="docs-section-target" id="/page/" name="/page/"></a>
+            <h2 class="docs-section-title"><a href='#/page/'>IOT.tips</a></h2>
+        </article>
+            <article class="docs-method">
+                <a class="docs-method-target" id="/page/intro/"  name="/page/intro/"></a>
+                <div class="docs-method-prose">
+                    <p>在 portal3.0 中有两种分页的调用，一种是smarty，一种是异步js</p>
+                </div>
+            </article>
+            <article class="docs-method">
+                <a class="docs-method-target" id="/page/smarty/"  name="/page/smarty/"></a>
+                    <h3 class="docs-method-title">
+                        <a href='#/page/smarty/'>smarty</a>
+                    </h3>
+                    <a class="docs-method-edit" href="javascript:;" target="_blank">编辑</a>
+                <div class="docs-method-prose">
+                    <div id="pagerPp"><div class="ui-pager"></div></div>
+                
+<pre>
+
+{&#37;**
+* Copyright (c) 2015 iot.com, Inc. All Rights Reserved
+*
+* @fileoverview 翻页模板
+* @author Libmw (limengjun@iot.chinamobile.com)
+* @date 15-6-8
+* @param page_num 当前第几页 从1开始
+* @param size 每页几条记录
+* @param total_num 总共记录数
+* @param page_url 翻页url，其中#page#是页数部分
+* @param [visible_num] 翻页区域能容纳的最多格子数量，包含上一页下一页、省略号，默认为16个。
+* @example
+    include file="../common/pager.tpl" page_num=$list_data.p size=$list_data.limit total_num=$list_data.total_num page_url="a.html?page=#page#"
+*%}
+
+&lt;div class="ui-pager">
+    {&#37;include file="../common/pager.tpl" page_num=$page_info.page size=$page_info.page_size total_num=$page_info.total_num page_url="/apikey?pid="|cat:$proj_id|cat:"&amp;page=#page#"&#37;}
+&lt;/div>
+</pre>
+
+                    <script>
+                        $(function () {
+                            var pageHtmls = IOT.getPagesHtml(10, 200, 10, "javascript:alert('点击了');", {visible_num: 10});
+                            $('#pagerPp').find('.ui-pager').html(pageHtmls);
+                        });
+                    </script>
+                </div>
+            </article>
+            <article class="docs-method">
+                <a class="docs-method-target" id="/page/js/"  name="/page/js/"></a>
+                    <h3 class="docs-method-title">
+                        <a href='#/page/js/'>js异步加载</a>
+                    </h3>
+                    <a class="docs-method-edit" href="javascript:;" target="_blank">编辑</a>
+                <div class="docs-method-prose">
+                    <div id="pagerP"><div class="ui-pager"></div></div>
+                
+<pre>
+&lt;div class="ui-pager">&lt;/div>
+// IOT.getPagesHtml(当前页数, 记录总数, 每页记录数, 翻页链接, options);
+&lt;script>
+    $(function () {
+        var pageHtml = IOT.getPagesHtml(5, 200, 10, "javascript:alert('点击了');", {visible_num: 10});
+        $('.ui-pager').html(pageHtml);
+    });
+&lt;/script>
+</pre>
+
+                <script>
+                    $(function () {
+                        var pageHtml = IOT.getPagesHtml(5, 200, 10, "javascript:alert('点击了');", {visible_num: 10});
+                        $('#pagerP').find('.ui-pager').html(pageHtml);
+                    });
+                </script>
+                </div>
+            </article>
+        <!-- ****************************************************************************************** -->
     </div>
 </div>

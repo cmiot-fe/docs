@@ -40,7 +40,7 @@
 						$(this).find('.tooltip').stop().animate({'opacity': 1}, 200);
 					}).on('mouseleave', function (e) {
 						$(this).find('.tooltip').stop().animate({'opacity': 0}, 200);
-					})
+					});
 				}
 
 			};

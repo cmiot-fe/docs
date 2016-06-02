@@ -1,0 +1,34 @@
+.ui-pager {
+    text-align: right
+}
+
+.ui-pager ul {
+    margin: 30px 0;
+    list-style: none;
+    overflow: hidden;
+    font-size: 0
+}
+
+.ui-pager ul li {
+    font-size: 14px;
+    display: inline-block;
+    line-height: 32px;
+    text-align: center;
+}
+.ui-pager ul li a {
+    text-decoration: none;
+    padding: 7px 13px;
+    line-height: 23px;
+    color: #7c7e8b;
+    border-radius: 3px;
+}
+.ui-pager ul li a:hover {
+    background-color: #00c0f1;
+    color: #fff;
+}
+
+.ui-pager ul li.active a {
+    background-color: #00c0f1;
+    color: #fff;
+    cursor: default
+}
