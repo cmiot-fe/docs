@@ -15,13 +15,15 @@
                 'info': 'icon-info-circled',
                 'error': 'icon-cancel-circled',
                 'warning': 'icon-attention-circled',
-                'success': 'icon-ok-circled'
+                'success': 'icon-ok-circled',
+                'welcome': 'icon-ok-circled'
             },
             className: {
-                'info': 'standard',
+                'info': 'info',
                 'error': 'alert',
                 'warning': 'warning',
-                'success': 'success'
+                'success': 'success',
+                'welcome': 'success'
             }
         };
     }
@@ -62,7 +64,7 @@
         typeof timeout === 'number' || (timeout = 2000);
         if (/^\s*$/.test(content) || !content) return false;
         var tip = new Tips({content: content, type: type || "success", timeout: timeout});
-        tip.hideClose($('.tisp-' + type))
+        tip.hideClose($('.tisp-' + type));
         var $tip_box = tip.create();
         tip.resetPosition($tip_box);
         if (timeout) setTimeout(function () {

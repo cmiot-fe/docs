@@ -65,6 +65,7 @@
     height: 110px;
     position: relative;
     border-radius: 6px;
+    margin-bottom: 30px; /* For IE  */
 }
 .color-block a em, .color-block a i {
     position: absolute;
@@ -90,3 +91,27 @@
     width: 200px;
 }
 
+.check-all-module p {
+    line-height: 32px;
+    display: inline-block;
+    margin-right: 40px;
+}
+.check-all-module p a {
+    display: block;
+    font-size: 14px;
+}
+.check-event-ul {
+    list-style-type: disc;
+    margin-left: 1.5em;
+    line-height: 28px;
+    font-size: 14px;
+}
+.check-event-ul a {
+    display: inline-block;
+    width: 120px;
+}
+
+/* tips */
+.iot-tips {
+    margin: 5px 0;
+}

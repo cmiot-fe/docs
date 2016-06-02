@@ -32,11 +32,6 @@
     background-color: #0ba2f1;
     color: #fff;
 }
-.button[disabled] {
-    background-color: #e3e3e3;
-    color: #b9b9b9;
-    cursor: not-allowed;
-}
 .button.huge {
     padding: 21px 0;
     width: 394px;
@@ -53,11 +48,6 @@
 .button.secondary:active {
     background-color: #7a7e89;
     color: #fff;
-}
-.button.secondary[disabled] {
-    background-color: #e3e3e3;
-    color: #b9b9b9;
-    cursor: not-allowed;
 }
 .button.expand {
     -webkit-border-radius: 14px;
@@ -84,5 +74,54 @@
     opacity: 1;
 }
 .button.expand.hollow {
-
+    border: 1px solid #00bff1;
+    background-color: #fff;
+    color: #00bff1;
+}
+.button.expand.hollow:hover {
+    /*background-color: #00bff1;*/
+}
+.button.expand.hollow:active {
+    color: #0ba2f1;
+    border-color: #0ba2f1;
+}
+.button.expand.hollow.cold {
+    border: 1px solid #7a7e89;
+    background-color: #fff;
+    color: #7a7e89;
+}
+.button.expand.hollow.cold:hover {
+    background-color: #b1b7c7;
+    color: #fff;
+}
+.button.expand.hollow.cold:active {
+    background-color: #7a7e89;
+    color: #fff;
+}
+.button.search {
+    width: 44px;
+    height: 44px;
+    border: 1px solid #dde2e5;
+    color: #00bff1;
+    font-size: 30px;
+    background-color: #fff;
+    padding: 0;
+    line-height: 44px;
+}
+.button.search:hover {
+    background-color: #dde2e5;
+}
+.button.search:active {
+    background-color: #00bff1;
+    color: #fff;
+}
+.button[disabled] {
+    background-color: #e3e3e3;
+    color: #b9b9b9;
+    cursor: not-allowed;
+}
+.button[disabled]:hover, .button[disabled]:active {
+    background-color: #e3e3e3;
+    color: #b9b9b9;
+    cursor: not-allowed;
 }

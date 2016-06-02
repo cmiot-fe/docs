@@ -64,6 +64,7 @@ body *{
     border: 0 none;
     border-radius: 5px;
     padding: 15px;
+    margin: 15px 0;
 }
 
 .doc-detail pre code {
@@ -92,21 +93,21 @@ code {
 /* Pretty printing styles. Used with prettify.js. */
 
 /* SPAN elements with the classes below are added by prettyprint. */
-.pln { color: #000 }  /* plain text */
+.pln { color: #000; font-family: 'Courier New', sans-serif; }  /* plain text */
 
 @media screen {
-    .str { color: #080 }  /* string content */
-    .kwd { color: #008 }  /* a keyword */
-    .com { color: #800 }  /* a comment */
-    .typ { color: #606 }  /* a type name */
-    .lit { color: #066 }  /* a literal value */
+    .str { color: #080; font-family: 'Courier New', sans-serif; font-size: 14px; }  /* string content */
+    .kwd { color: #008; font-family: 'Courier New', sans-serif; font-size: 14px; }  /* a keyword */
+    .com { color: #800; font-family: 'Courier New', sans-serif; font-size: 14px; }  /* a comment */
+    .typ { color: #606; font-family: 'Courier New', sans-serif; font-size: 14px; }  /* a type name */
+    .lit { color: #066; font-family: 'Courier New', sans-serif; font-size: 14px; }  /* a literal value */
     /* punctuation, lisp open bracket, lisp close bracket */
-    .pun, .opn, .clo { color: #660 }
-    .tag { color: #008 }  /* a markup tag name */
-    .atn { color: #606 }  /* a markup attribute name */
-    .atv { color: #080 }  /* a markup attribute value */
-    .dec, .var { color: #606 }  /* a declaration; a variable name */
-    .fun { color: red }  /* a function name */
+    .pun, .opn, .clo { color: #660; font-family: 'Courier New', sans-serif; font-size: 14px; }
+    .tag { color: #008; font-family: 'Courier New', sans-serif; font-size: 14px; }  /* a markup tag name */
+    .atn { color: #606; font-family: 'Courier New', sans-serif; font-size: 14px; }  /* a markup attribute name */
+    .atv { color: #080; font-family: 'Courier New', sans-serif; font-size: 14px; }  /* a markup attribute value */
+    .dec, .var { color: #606; font-family: 'Courier New', sans-serif; font-size: 14px; }  /* a declaration; a variable name */
+    .fun { color: red; font-family: 'Courier New', sans-serif; font-size: 14px; }  /* a function name */
 }
 
 /* Use higher contrast and text-weight for printable form. */
