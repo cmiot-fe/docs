@@ -220,7 +220,8 @@ li.L9 { background: #eee }
     margin-right: 25%;
     padding-right: 20px;
     padding-left: 30px;
-    color: #222
+    color: #222;
+    line-height: 28px;
 }
 
 .docs-method-prose p {
@@ -387,4 +388,43 @@ li.L9 { background: #eee }
 .is-onenet-timezone .docs-method-signature pre {
     border-color: rgba(78, 124, 173, 0.7);
     background: rgba(78, 124, 173, 0.15)
+}
+#main {
+    margin-top: 100px;
+}
+
+#header {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    opacity: 0.8;
+    left: 0;
+    top: 0;
+    background-color: #00c0f1;
+    z-index: 2;
+}
+#header p {
+    margin: 0 auto;
+    width: 400px;
+    line-height: 70px;
+    font-size: 26px;
+    color: #fff;
+}
+#header.bgColor{
+    background-color: #eee;
+    border-bottom: 1px solid #ddd;
+}
+#header.in {
+    top: 0;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+}
+#header.out {
+    top: -85px;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    transition: all 0.6s ease;
 }

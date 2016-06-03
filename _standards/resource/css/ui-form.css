@@ -1,0 +1,95 @@
+.form-horizontal input,.form-horizontal textarea,.form-horizontal select {
+    border-radius: 0;
+    border: 1px solid #dddee3;
+    padding: 0 8px;
+    font-family: "Microsoft YaHei",Arial,sans-serif
+}
+
+.form-horizontal input:focus,.form-horizontal textarea:focus,.form-horizontal select:focus {
+    border-color: #999
+}
+
+.form-horizontal .form-group {
+    padding: 20px 0;
+    position: relative
+}
+
+.form-horizontal .form-group.group-single {
+    padding-left: 88px
+}
+
+.form-horizontal .form-group.group-single label {
+    width: auto;
+    vertical-align: middle
+}
+
+.form-horizontal .form-group.group-single .parsley-errors-list {
+    padding-left: 0
+}
+
+.form-horizontal .parsley-errors-list {
+    display: inline-block;
+    position: absolute;
+}
+
+.form-horizontal label,.form-horizontal input,.form-horizontal select,.form-horizontal .filed,.form-horizontal textarea {
+    display: inline-block;
+    font-size: 14px;
+    *display: inline;
+    *zoom:1
+}
+
+.form-horizontal label,.form-horizontal .filed {
+    vertical-align: top;
+    text-align: left;
+    line-height: 40px
+}
+
+.form-horizontal label {
+    display: block;
+}
+
+.form-horizontal label.normal {
+    width: auto;
+    vertical-align: middle
+}
+
+.form-horizontal input,.form-horizontal select {
+    line-height: 40px;
+    height: 40px
+}
+
+.form-horizontal select {
+    padding: 8px;
+    box-sizing: content-box;
+    height: 24px;
+    line-height: 24px
+}
+
+.form-horizontal textarea {
+    line-height: 40px
+}
+
+.form-horizontal input[type=radio],.form-horizontal input[type=checkbox] {
+    padding: 0;
+    height: auto;
+    width: auto;
+    vertical-align: middle
+}
+
+.form-horizontal.multi-lang .form-group {
+    padding: 10px 0
+}
+
+.form-horizontal.multi-lang label {
+    display: block;
+    width: 100%
+}
+
+.form-horizontal.multi-lang .parsley-errors-list {
+    padding-left: 0
+}
+
+.form-horizontal .group-single label {
+    display: inline-block
+}

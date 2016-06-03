@@ -1,0 +1,71 @@
+.project-nav h1 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #333;
+    line-height: 42px;
+    height: 42px
+}
+
+.project-nav h1 span {
+    color: #e2e2e2;
+    font-size: 28px;
+    margin: 0 8px
+}
+
+.project-nav ul {
+    position: relative;
+    left: 0;
+    top: 10px;
+    background-color: #dbe1e4;
+}
+
+.project-nav .nav-list li {
+    display: inline-block;
+    position: relative;
+    margin: 0 -2px 0 0;
+    -webkit-transition: all .1s ease-in;
+    -moz-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+    top: -2px;
+}
+
+.project-nav .nav-list li a {
+    display: block;
+    font-size: 14px;
+    color: #7a7e89;
+    background: #dbe1e4;
+    padding: 0.5em 1em;
+    border-radius: 3px;
+    -webkit-transition: all .1s ease-in;
+    -moz-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+}
+
+.project-nav .nav-list li:hover {
+    background: #fff;
+}
+.project-nav .nav-list li:hover a {
+    color: #333;
+    background: #fff;
+}
+
+.project-nav .nav-list li.active {
+    background: #fff;
+    position: relative;
+    top: -5px;
+}
+
+.project-nav .nav-list li.active a {
+    font-size: 16px;
+    color: #333;
+    background: #fff;
+    margin: 0;
+    height: 48px;
+}
+.project-nav .project-content {
+    background-color: #fff;
+    z-index: 10;
+    position: relative;
+    padding: 1em;
+    top: -12px;
+}

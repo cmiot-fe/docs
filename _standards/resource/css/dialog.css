@@ -1,0 +1,69 @@
+.ui-dialog-mask {
+    display: none;
+    position: fixed;
+    _position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2999;
+    background-color: #000;
+    opacity: .7;
+    filter: alpha(opacity=70);
+    width: 100%;
+}
+
+.ui-dialog-pop {
+    display: none;
+    position: fixed;
+    _position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3000;
+    background-color: #fff;
+    border: 1px solid #999;
+    border: 1px solid rgba(0,0,0,.3);
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 3px 7px rgba(0,0,0,.3);
+    -moz-box-shadow: 0 3px 7px rgba(0,0,0,.3);
+    box-shadow: 0 3px 7px rgba(0,0,0,.3);
+    outline: 0
+}
+
+.ui-dialog-pop .ui-dialog-hd {
+    font-size: 18px;
+    padding: 0 15px;
+    line-height: 40px;
+    position: relative;
+    font-style: normal;
+    border-bottom: 1px solid #eef2f5;
+}
+
+.ui-dialog-pop .ui-dialog-bd {
+    margin: 20px
+}
+
+.ui-dialog-pop .ui-dialog-close {
+    position: fixed;
+    right: 5px;
+    top: -12px;
+    cursor: pointer;
+    font-size: 80px;
+    color: #fff;
+}
+
+.ui-dialog-pop .ui-dialog-ft {
+    /*background: #f0f0f0;*/
+    padding: 20px;
+    text-align: right;
+}
+
+.ui-dialog-pop .ui-dialog-ft .ui-dialog-button {
+    margin-right: 15px
+}
+
+.ui-dialog-pop .button {
+    margin-right: 15px
+}

@@ -14,6 +14,10 @@
     <link href="resource/css/square/green.css" rel="stylesheet">
     <link href="resource/css/tips.css" rel="stylesheet">
     <link href="resource/css/pager.css" rel="stylesheet">
+    <link href="resource/css/dialog.css" rel="stylesheet">
+    <link href="resource/css/tab.css" rel="stylesheet">
+    <link href="resource/css/ui-form.css" rel="stylesheet">
+    <link href="resource/css/ui-parsley.css" rel="stylesheet">
     {{ page.extcss }}
     <script>
         var IOT = {};
@@ -33,6 +37,13 @@
 <script src="resource/js/prettify.js"></script>
 <script src="resource/js/jquery-tooltip.js"></script>
 <script src="resource/js/pager.js"></script>
+<script src="resource/js/dialog.js"></script>
+<script src="resource/js/lang.js"></script>
+<script src="resource/js/parsley.min.js"></script>
+<script src="resource/js/parsley.i18n.js"></script>
+<div id="header">
+    <p>OneNET 3.0 前端标准和规范</p>
+</div>
 <div id="main" class="grid doc-detail">
     {{ content }}
 </div>
@@ -40,10 +51,42 @@
 
 <script>
     (function(){
+        var currentScroll = 0;
         $(function() {
             $('pre').addClass('prettyprint');
             prettyPrint();
             $('body').tooltip().init();
+
+            $(window).scroll(function(){
+                myScroll();
+            });
+
+            function myScroll() {
+                var nextScroll = $(this).scrollTop(), $header = $('#header');
+//            console.log('scrollPosition' + $(document).scrollTop() + 'currentScroll: => ' + currentScroll + '  nextScroll: => ' + nextScroll);
+                if (nextScroll > currentScroll){
+                    $header.removeClass('in bgColor').addClass('out');
+                    if (nextScroll >= $(document).height()-$(window).height()){
+                        $header.removeClass('out').addClass('in bgColor');
+                    }
+                    if ($(document).scrollTop() <= 0) {
+                        $header.removeClass('out').addClass('in');
+                        $header.removeClass('bgColor');
+                    }
+                } else {
+                    $header.removeClass('out').addClass('in bgColor');
+                    if ($(window).scrollTop() >= 0 && $(window).scrollTop() <= 100) {
+                        $header.removeClass('bgColor');
+                    }
+                }
+
+                if ($(window).width() >= 1000) {
+                    $header.removeClass('bgColor');
+                }
+
+                //Updates current scroll position
+                currentScroll = nextScroll;
+            }
         });
     })();
 </script>

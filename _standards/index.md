@@ -6,42 +6,66 @@
 <div class="docs">
     <div class="docs-nav">
         <div class="docs-nav-section">
-            <a class="docs-nav-section-title" href='#/color/'>Color</a>
+            <a class="docs-nav-section-title" href='#/color/'>颜色</a>
                 <a class="docs-nav-item" href="#/color/font/">字体</a>
                 <a class="docs-nav-item" href="#/color/bgAndBtn/">常规背景和按钮</a>
                 <a class="docs-nav-item" href="#/color/table/">表格相关</a>
                 <a class="docs-nav-item" href="#/color/tip/">提示性图标</a>
         </div>
         <div class="docs-nav-section">
-            <a class="docs-nav-section-title" href='#/btn/'>Button</a>
+            <a class="docs-nav-section-title" href='#/btn/'>按钮</a>
                 <a class="docs-nav-item" href="#/btn/normal/">常规按钮</a>
                 <a class="docs-nav-item" href="#/btn/icon/">icon按钮</a>
                 <a class="docs-nav-item" href="#/btn/expandBtn/">expand按钮</a>
                 <a class="docs-nav-item" href="#/btn/search/">搜索按钮</a>
         </div>
         <div class="docs-nav-section">
-            <a class="docs-nav-section-title" href='#/check/'>CheckBox and Radio</a>
+            <a class="docs-nav-section-title" href='#/check/'>单、复选框</a>
                 <a class="docs-nav-item" href="#/check/all/">单、复选框</a>
                 <a class="docs-nav-item" href="#/check/init/">初始化</a>
                 <a class="docs-nav-item" href="#/check/callback/">回调事件</a>
                 <a class="docs-nav-item" href="#/check/function/">方法</a>
         </div>
         <div class="docs-nav-section">
-            <a class="docs-nav-section-title" href='#/selector/'>Selector</a>
+            <a class="docs-nav-section-title" href='#/selector/'>选择框</a>
                 <a class="docs-nav-item" href="#/selector/single/">单项选择框</a>
         </div>
         <div class="docs-nav-section">
-            <a class="docs-nav-section-title" href='#/tooltip/'>Tooltip</a>
+            <a class="docs-nav-section-title" href='#/tooltip/'>提示工具</a>
                 <a class="docs-nav-item" href="#/tooltip/atitle/">提示工具</a>
         </div>
         <div class="docs-nav-section">
-            <a class="docs-nav-section-title" href='#/popTip/'>Tips</a>
+            <a class="docs-nav-section-title" href='#/popTip/'>消息提示</a>
                 <a class="docs-nav-item" href="#/popTip/tip/">消息提示框</a>
         </div>
         <div class="docs-nav-section">
-            <a class="docs-nav-section-title" href='#/page/'>Pagination</a>
+            <a class="docs-nav-section-title" href='#/page/'>分页</a>
                 <a class="docs-nav-item" href="#/page/smarty/">分页smarty</a>
                 <a class="docs-nav-item" href="#/page/js/">分页js</a>
+        </div>
+        <div class="docs-nav-section">
+            <a class="docs-nav-section-title" href='#/dialog/'>弹出层</a>
+                <a class="docs-nav-item" href="#/dialog/pop/">弹出框</a>
+                <a class="docs-nav-item" href="#/dialog/confirm/">确认框</a>
+        </div>
+        <div class="docs-nav-section">
+            <a class="docs-nav-section-title" href='#/tab/'>标签</a>
+                <a class="docs-nav-item" href="#/tab/tab/">标签页</a>
+        </div>
+        <div class="docs-nav-section">
+            <a class="docs-nav-section-title" href='#/form/'>表单验证</a>
+                <a class="docs-nav-item" href="#/form/check/">表单验证插件</a>
+        </div>
+        <div class="docs-nav-section">
+            <a class="docs-nav-section-title" href='#/iotPost/'>IOT异步提交</a>
+                <a class="docs-nav-item" href="#/iotPost/post/">post提交</a>
+        </div>
+        <div class="docs-nav-section">
+            <a class="docs-nav-section-title" href='#/standards/'>代码规范</a>
+                <a class="docs-nav-item" href="#/standards/js/">javascript</a>
+                <a class="docs-nav-item" href="#/standards/css/">css</a>
+                <a class="docs-nav-item" href="#/standards/smarty/">Smarty</a>
+                <a class="docs-nav-item" href="#/standards/html/">HTML</a>
         </div>
     </div>
     <div class="docs-content">
@@ -564,7 +588,7 @@ IOT.tips(content, type, timeout);
         <!-- pager -->
         <article class="docs-section">
             <a class="docs-section-target" id="/page/" name="/page/"></a>
-            <h2 class="docs-section-title"><a href='#/page/'>IOT.tips</a></h2>
+            <h2 class="docs-section-title"><a href='#/page/'>Pagination</a></h2>
         </article>
             <article class="docs-method">
                 <a class="docs-method-target" id="/page/intro/"  name="/page/intro/"></a>
@@ -622,9 +646,9 @@ IOT.tips(content, type, timeout);
                 
 <pre>
 &lt;div class="ui-pager">&lt;/div>
-// IOT.getPagesHtml(当前页数, 记录总数, 每页记录数, 翻页链接, options);
 &lt;script>
     $(function () {
+        // IOT.getPagesHtml(当前页数, 记录总数, 每页记录数, 翻页链接, options);
         var pageHtml = IOT.getPagesHtml(5, 200, 10, "javascript:alert('点击了');", {visible_num: 10});
         $('.ui-pager').html(pageHtml);
     });
@@ -637,6 +661,537 @@ IOT.tips(content, type, timeout);
                         $('#pagerP').find('.ui-pager').html(pageHtml);
                     });
                 </script>
+                </div>
+            </article>
+        <!-- ****************************************************************************************** -->    
+        
+        <!-- Dialog -->
+        <article class="docs-section">
+            <a class="docs-section-target" id="/dialog/" name="/dialog/"></a>
+            <h2 class="docs-section-title"><a href='#/dialog/'>Dialog</a></h2>
+        </article>
+            <article class="docs-method">
+                <a class="docs-method-target" id="/dialog/intro/"  name="/dialog/intro/"></a>
+                <div class="docs-method-prose">
+                    <p>使用IOT.Dialog模块创建一个弹出窗口。</p>
+                    <p>Dialog模块是公用模块，默认已经打包到公用js文件里，无需单独引入</p>
+                    
+                    <h3>实例属性</h3>
+                    
+                    <p>$root属性指向当前对话框的顶层dom，可以通过$root.find()来查找对话框里的其他元素</p>
+                    
+                    <h3>说明</h3>
+                    
+                    <p>在title和content里可以用j_dlg_close类名来标记关闭按钮，一旦元素拥有此类名，点击此元素便可关闭dialog</p>
+                    <p>ui-dialog-bd代表窗口主内容，具有默认的padding样式</p>
+                    <p>ui-dialog-btn代表窗口底部的按钮容器，这个容器里的所有button类都有左边距15px， 如：content: ‘&lt;div>我是内容&lt;/div>&lt;div class=”ui-dialog-btn”>&lt;a class=”button”>关闭&lt;a>&lt;/div>’</p>
+                </div>
+            </article>
+            <article class="docs-method">
+                <a class="docs-method-target" id="/dialog/pop/"  name="/dialog/pop/"></a>
+                    <h3 class="docs-method-title">
+                        <a href='#/dialog/pop/'>弹出框</a>
+                    </h3>
+                    <a class="docs-method-edit" href="javascript:;" target="_blank">编辑</a>
+                <div class="docs-method-prose">
+                    <a class="button dialog-demo">弹一个试试</a>
+                
+<pre>
+var dialog = new IOT.Dialog({
+    title: '系统提示', //窗口标题的html，如果不设置则无标题
+    content: '&lt;div class="ui-dialog-bd">&lt;p>欢迎！&lt;/p>&lt;/div>',
+    //窗口内容的html，必须是html格式不能是无格式纯文本，如果不设置则无内容
+    beforeClose: null, 
+    //调用close方法时执行的callback，如果此callback返回false则会阻止窗口的关闭
+    showClose: true,
+    showFooter: true,
+    className: '', //窗口最外层容器的类名
+    cache: true, //是否缓存。若为false则close()的时候会remove掉对话框对应的dom元素
+    width: '40%' //窗口宽度，如不传递默认为40%
+});
+
+//打开窗口
+dialog.open();
+
+//关闭窗口
+dialog.close(); //如果cache设置为false，则会销毁窗口对应的dom元素
+
+//设置窗口标题
+dialog.setTitle();
+
+//设置窗口内容
+dialog.setContent();
+</pre>
+                    <script>
+                        $(function () {
+                            var dialog = new IOT.Dialog({
+                                title: '系统提示', //窗口标题的html，如果不设置则无标题
+                                content: '<div class="ui-dialog-bd"><p>欢迎！</p></div>',
+                                //窗口内容的html，必须是html格式不能是无格式纯文本，如果不设置则无内容
+                                beforeClose: null, //调用close方法时执行的callback，如果此callback返回false则会阻止窗口的关闭
+                                showClose: true,
+                                showFooter: true,
+                                className: '', //窗口最外层容器的类名
+                                cache: true, //是否缓存。若为false则close()的时候会remove掉对话框对应的dom元素
+                                width: '40%' //窗口宽度，如不传递默认为40%
+                            });
+                            
+                            $('.dialog-demo').on('click', function () {
+                                //打开窗口
+                                dialog.open();
+                            });
+                            
+                        });
+                    </script>
+                </div>
+            </article>
+            <article class="docs-method">
+                <a class="docs-method-target" id="/dialog/confirm/"  name="/dialog/confirm/"></a>
+                    <h3 class="docs-method-title">
+                        <a href='#/dialog/confirm/'>确认框</a>
+                    </h3>
+                    <a class="docs-method-edit" href="javascript:;" target="_blank">编辑</a>
+                <div class="docs-method-prose">
+                    <a class="button dialog-demo-confirm">Confirm</a>
+                
+<pre>
+IOT.Dialog.confirm('您确认要删除此项内容？', function(){
+    alert('点击了确认按钮');
+}, function(){
+    alert('点击了取消按钮');
+});
+</pre>
+                    <script>
+                        $(function () {
+                            
+                            $('.dialog-demo-confirm').on('click', function () {
+                                IOT.Dialog.confirm('您确认要删除此项内容？', function(){
+                                    alert('点击了确认按钮');
+                                }, function(){
+                                    alert('点击了取消按钮');
+                                });
+                            });
+                            
+                        });
+                    </script>
+                </div>
+            </article>
+        <!-- ****************************************************************************************** -->
+        
+        <!-- Tab -->
+        <article class="docs-section">
+            <a class="docs-section-target" id="/tab/" name="/tab/"></a>
+            <h2 class="docs-section-title"><a href='#/tab/'>Tab</a></h2>
+        </article>
+            <article class="docs-method">
+                <a class="docs-method-target" id="/tab/intro/"  name="/tab/intro/"></a>
+                <div class="docs-method-prose">
+                    <p>Tab 标签切换页</p>
+                </div>
+            </article>
+            <article class="docs-method">
+                <a class="docs-method-target" id="/tab/tab/"  name="/tab/tab/"></a>
+                    <h3 class="docs-method-title">
+                        <a href='#/tab/tab/'>Tab 示例</a>
+                    </h3>
+                    <a class="docs-method-edit" href="javascript:;" target="_blank">编辑</a>
+                <div class="docs-method-prose">
+                    <div class="project-nav">
+                        <ul class="nav-list">
+                            <li>
+                                <a href="javascript:;">项目概况</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">设备管理</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">触发器管理</a>
+                            </li>
+                            <li class="active">
+                                <a href="javascript:;">APIKey管理</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">模板应用管理</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">独立应用管理</a>
+                            </li>
+                        </ul>
+                        <div class="project-content">
+                            为什么这个内容这么空洞呢？最好还加点东西，不然太无趣了。
+                            为什么这个内容这么空洞呢？最好还加点东西，不然太无趣了。
+                            为什么这个内容这么空洞呢？最好还加点东西，不然太无趣了。
+                            为什么这个内容这么空洞呢？最好还加点东西，不然太无趣了。
+                        </div>
+                    </div>
+                
+<pre>
+&lt;div class="project-nav">
+    &lt;ul class="nav-list">
+        &lt;li>
+            &lt;a href="javascript:;">项目概况&lt;/a>
+        &lt;/li>
+        &lt;li>
+            &lt;a href="javascript:;">设备管理&lt;/a>
+        &lt;/li>
+        &lt;li>
+            &lt;a href="javascript:;">触发器管理&lt;/a>
+        &lt;/li>
+        &lt;li class="active">
+            &lt;a href="javascript:;">APIKey管理&lt;/a>
+        &lt;/li>
+    &lt;/ul>
+    &lt;div class="project-content">
+        为什么这个内容这么空洞呢？最好还加点东西，不然太无趣了。
+        为什么这个内容这么空洞呢？最好还加点东西，不然太无趣了。
+        为什么这个内容这么空洞呢？最好还加点东西，不然太无趣了。
+        为什么这个内容这么空洞呢？最好还加点东西，不然太无趣了。
+    &lt;/div>
+&lt;/div>
+</pre>
+                </div>
+            </article>
+        <!-- ****************************************************************************************** -->
+        
+        <!-- Form -->
+        <article class="docs-section">
+            <a class="docs-section-target" id="/form/" name="/form/"></a>
+            <h2 class="docs-section-title"><a href='#/form/'>Form</a></h2>
+        </article>
+            <article class="docs-method">
+                <a class="docs-method-target" id="/form/intro/"  name="/form/intro/"></a>
+                <div class="docs-method-prose">
+                    <p>Form 验证插件 <a href="http://parsleyjs.org/" target="_blank">parsley.js</a></p>
+                    <p>具体的方法，方式请查看官网详细的说明文档<a href="http://parsleyjs.org/doc/index.html" target="_blank">http://parsleyjs.org/doc/index.html</a></p>
+                    <p>parsleyjs已经打包到公用js文件里，无需单独引入</p>
+                </div>
+            </article>
+            <article class="docs-method">
+                <a class="docs-method-target" id="/form/check/"  name="/form/check/"></a>
+                    <h3 class="docs-method-title">
+                        <a href='#/form/check/'>Form 验证示例</a>
+                    </h3>
+                    <a class="docs-method-edit" href="javascript:;" target="_blank">编辑</a>
+                <div class="docs-method-prose">
+                    <div class="form-check">
+                        <form class="j_login_form form-horizontal" method="post" data-parsley-validate>
+                            <div class="form-group">
+                                <label for="name">账号</label>
+                                <input type="text" name="name" id="name" required data-parsley-length="[5, 30]"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="pass">密码</label>
+                                <input type="password" name="pass" id="pass" required />
+                            </div>
+                            <div class="form-group">
+                                <label></label>
+                                <button class="button j_submit button-login" type="submit"> 登录</button>
+                            </div>
+                        </form>
+                    </div>
+                
+<pre>
+
+&lt;form class="j_login_form form-horizontal" method="post" data-parsley-validate>
+    &lt;div class="form-group">
+        &lt;label for="name">账号&lt;/label>
+        &lt;input type="text" name="name" id="name" required data-parsley-length="[5, 30]"/>
+    &lt;/div>
+    &lt;div class="form-group">
+        &lt;label for="pass">密码&lt;/label>
+        &lt;input type="password" name="pass" id="pass" required />
+    &lt;/div>
+    &lt;div class="form-group">
+        &lt;label>&lt;/label>
+        &lt;button class="button j_submit button-login" type="submit">登录&lt;/button>
+    &lt;/div>
+&lt;/form>
+</pre>
+                </div>
+            </article>
+        <!-- ****************************************************************************************** -->
+        
+        <!-- IOT.post -->
+        <article class="docs-section">
+            <a class="docs-section-target" id="/iotPost/" name="/iotPost/"></a>
+            <h2 class="docs-section-title"><a href='#/iotPost/'>异步提交IOT.post</a></h2>
+        </article>
+            <article class="docs-method">
+                <a class="docs-method-target" id="/iotPost/intro/"  name="/iotPost/intro/"></a>
+                <div class="docs-method-prose">
+                    <p></p>
+                </div>
+            </article>
+            <article class="docs-method">
+                <a class="docs-method-target" id="/iotPost/post/"  name="/iotPost/post/"></a>
+                    <h3 class="docs-method-title">
+                        <a href='#/iotPost/post/'>Form 验证示例</a>
+                    </h3>
+                    <a class="docs-method-edit" href="javascript:;" target="_blank">编辑</a>
+                <div class="docs-method-prose">
+                    详情参见：<a href="/docs/fe/ajax.html" target="_blank">http://iotofcmcc.github.io/docs/fe/ajax.html</a>
+                </div>
+            </article>
+        <!-- ****************************************************************************************** -->
+        
+        <!-- standards -->
+        <article class="docs-section">
+            <a class="docs-section-target" id="/standards/" name="/standards/"></a>
+            <h2 class="docs-section-title"><a href='#/standards/'>Standards</a></h2>
+        </article>
+            <article class="docs-method">
+                <a class="docs-method-target" id="/standards/intro/"  name="/standards/intro/"></a>
+                <div class="docs-method-prose">
+                    <p>前端涉及的规范和标准</p>
+                </div>
+            </article>
+            <article class="docs-method">
+                <a class="docs-method-target" id="/standards/js/"  name="/standards/js/"></a>
+                    <h3 class="docs-method-title">
+                        <a href='#/standards/js/'>javascript</a>
+                    </h3>
+                    <a class="docs-method-edit" href="javascript:;" target="_blank">编辑</a>
+                <div class="docs-method-prose">
+                    <h3>函数和变量命名</h3>
+                    
+                    <p>命名必须匹配正则/^[_a-zA-Z]\w$/</p>
+                    
+                    <p>必须采用驼峰式命名，如function pageManage <span style="color:red;">*</span></p>
+                    
+                    <p>类名首字母大写，如Dialog <span style="color:red;">*</span></p>
+                    
+                    <p>私有变量和私有函数使用"_"做前缀 <span style="color:red;">*</span></p>
+                    
+                    <p>全局变量用纯大写字母，用"_"做连接符，如IOT <span style="color:red;">*</span></p>
+                    
+                    <p>禁止在业务页面使用全局变量。需要使用全局变量的地方可以放到IOT命名空间，如IOT.deviveId <span style="color:red;">*</span></p>
+                    
+                    <p>jquery对象使用$做前缀，如$dom <span style="color:red;">*</span></p>
+                    
+                    <p>"_"已经保留，不能作为变量的命名</p>
+                    
+                    <p>对象的key不能使用关键字或者保留字 <span style="color:red;">*</span></p>
+                    
+                    <h3>关键字</h3>
+                    
+                    <p>"break", "case", "catch", "const", "continue", "default", "delete", "do", "else", "finally", "for", "function", "if", "in", "instanceof", "new", "return", "switch", "throw", "try", "typeof", "var", "void", "while", "with", "false", "true", "null", "undefined"</p>
+                    
+                    <h3>保留字</h3>
+                    
+                    <p>"abstract", "boolean", "byte", "char", "class", "debugger", "double", "enum", "export", "extends", "final", "float", "goto", "implements", "import", "int", "interface", "long", "native", "package", "private", "protected", "public", "short", "static", "super", "synchronized", "throws", "transient", "volatile", "_"</p>
+
+                </div>
+            </article>
+            <article class="docs-method">
+                <a class="docs-method-target" id="/standards/css/"  name="/standards/css/"></a>
+                    <h3 class="docs-method-title">
+                        <a href='#/standards/css/'>css</a>
+                    </h3>
+                    <a class="docs-method-edit" href="javascript:;" target="_blank">编辑</a>
+                <div class="docs-method-prose">
+                    <h3>命名规范</h3>
+                    
+                    <p>以小写字母和数字命名，用短横线 - 连接。/^[a-z][a-zd-]/</p>
+                    
+                    <p>id只作为JS hook <span style="color:red;">*</span></p>
+                    
+                    <p>样式只能写在class下面 <span style="color:red;">*</span></p>
+                    
+                    <p>class作为js hook必须在前面加j_ <span style="color:red;">*</span></p>
+                    
+                    <h3>基本书写规范</h3>
+                    
+                    <p>使用.clearfix清除浮动  <span style="color:red;">*</span></p>
+                    
+                    <p>禁止使用!important <span style="color:red;">*</span></p>
+                    
+                    <p>禁止使用expression <span style="color:red;">*</span></p>
+                    
+                    <p>分号，冒号，逗号前面不带空格，后面紧跟一个空格</p>
+                    
+                    <h3>图片格式选择</h3>
+                    
+                    <p>广告图片、照片、颜色非常丰富的图片 JPG <span style="color:red;">*</span></p>
+                    
+                    <p>Sprite、图标、简单、对比、文本 PNG8(fireworks) <span style="color:red;">*</span></p>
+                </div>
+            </article>
+            <article class="docs-method">
+                <a class="docs-method-target" id="/standards/smarty/"  name="/standards/smarty/"></a>
+                    <h3 class="docs-method-title">
+                        <a href='#/standards/smarty/'>Smarty</a>
+                    </h3>
+                    <a class="docs-method-edit" href="javascript:;" target="_blank">编辑</a>
+                <div class="docs-method-prose">
+                    <h3>Smarty语法</h3>
+                    
+                    <p>Smarty版本使用最新的smarty3，左分隔符：{ % ，右分隔符：% }</p>
+                    
+                    <p>Smarty文件的后缀使用 tpl ，方便phpStorm识别。</p>
+                    
+                    <p>Smarty中文文档： <a href="http://www.smarty.net/docs/zh_CN/smarty.for.designers.tpl" target="_blank">http://www.smarty.net/docs/zh_CN/smarty.for.designers.tpl</a></p>
+                    
+                    
+                    <h3>文件夹组织</h3>
+                    
+                    <p>模板使用继承机制，顶级模块为common/base.tpl，其他模板都应该从顶层模板里继承。顶层模块里定义了各种代码块，书写模板时只需要对需要填充的代码块进行填充。</p>
+                    
+                    <p>模块按照页面级别划分并建立相应文件夹，例如首页放在base文件夹中</p>
+                    
+                    <p>模板文件直接放在模块文件夹下，不另外建立文件夹存放模板文件。</p>
+                    
+                    
+                    <h3>模板文件顶部说明</h3>
+                    
+                    <p>说明格式：</p>
+<pre>
+&lt;%**
+* Copyright (c) ${YEAR} zhubajie.com, Inc. All Rights Reserved
+*
+* @fileoverview 模板文件
+* @author Libmw (limengjun@iot.chinamobile.com)
+* @date ${DATE}
+*%>
+</pre>
+                    <p>PhpStorm的设置：</p>
+                    
+                    <p><span style="color:red;">*</span> File => New => Edit File Templates</p>
+                    
+                    <p><span style="color:red;">*</span> 点击绿色"+"号，输入Name：smarty，Extention：tpl，再把上面的格式复制到模板编辑框里即可。</p>
+                    
+                    <h3>Smarty的一些重要规则</h3>
+                    
+                    <p>继承后的最终模板，后面的block可以使用前面的block里定义的变量。</p>
+                    
+                    
+                    <p>模板<strong>可以</strong>使用inc文件中的function，而且<strong>可以跨block</strong>使用。但是要先定义再使用。</p>
+                    
+                    
+                    <p>inc文件<strong>可以</strong>使用模板里的变量，而模板<strong>不可以</strong>使用inc文件里的变量。</p><br>
+                    
+                    
+                    <p>继承以后的最终模板，可以通过</p>
+<pre>
+{&#37;block name="layout_before" prepend%}
+    {&#37;$menu_main = 'monitor'%}
+{&#37;/block%}
+</pre>
+                    <p>来定义变量给父模板使用</p>
+                </div>
+            </article>
+            <article class="docs-method">
+                <a class="docs-method-target" id="/standards/html/"  name="/standards/html/"></a>
+                    <h3 class="docs-method-title">
+                        <a href='#/standards/html/'>HTML</a>
+                    </h3>
+                    <a class="docs-method-edit" href="javascript:;" target="_blank">编辑</a>
+                <div class="docs-method-prose">
+                    <h3>基本书写规范</h3>
+                    
+                    <p>代码必须缩进，使用tab(四个空格)缩进代码 <span style="color:red;">*</span></p>
+                    
+                    <p>使用&lt;!DOCTYPE html>声明 <span style="color:red;">*</span></p>
+                    
+                    <p>class和id命名用小写字母，数字组成，用“_”连接 <span style="color:red;">*</span></p>
+                    
+                    <p>元素的标签和属性名必须小写，属性值必须加双引号 <span style="color:red;">*</span></p>
+                    
+                    <p>作为JS的钩子的classname命名前面加上“j_”前缀 <span style="color:red;">*</span></p>
+                    
+                    <p>img、frame、iframe、embed标签src值不能为空</p>
+                    
+                    <p>a标签的href值禁止使用javascript:void(0)，推荐使用&lt;a href="#" onclick="return false;" >...&lt;/a> <span style="color:red;">*</span></p>
+                    
+                    <p>注意表现和逻辑分离，标签内部禁止包含event。(特殊的需求，onload和onerror) <span style="color:red;">*</span></p>
+                    
+                    <p>禁止使用font及color等属性去定义文字样式，文字样式应该定义在CSS中 <span style="color:red;">*</span></p>
+                    
+                    <p>img标签尽量填写src和width、height属性、alt属性 <span style="color:red;">*</span></p>
+                    
+                    <p>表单外按钮推荐使用&lt;button>标签并且声明type属性来实现</p>
+                    
+                    <p>尽量使用语义化标签</p>
+                    
+                    <p>不要使用table来布局，在该使用table的时候大胆的用</p>
+                    
+                    <p>javascript和style标签不需要写type属性和language</p>
+                    
+                    <h3>表单</h3>
+                    
+                    <p>表单元素对应的文本请用&lt;label>标签包含，并且for属性指向表单元素的id。 <span style="color:red;">*</span></p>
+                    
+                    <p>form标签禁止嵌套form。 `*`</p>
+                    
+                    <p>表单元素的name禁止设置为action, enctype, method, novalidate, target, submit。会导致表单提交混乱 <span style="color:red;">*</span></p>
+                    
+                    <h3>标签闭合</h3>
+                    
+                    <p>area, base, basefont, br, col, frame, hr, input, img, link, meta, param，此类标签为自闭合标签，写法&lt;tagname /&gt;</p>
+                    
+                    <p>其他都是非自闭合标签，写法&lt;tagname&gt;&lt;/tagname&gt;</p>
+                    
+                    <h3>标签语义</h3>
+                    
+                    <h4>结构性元素</h4>
+                    
+                    <p>&lt;p>表示段落，只能包含内联元素，不能包含块级元素</p>
+                    
+                    <p>&lt;div>用于布局。可包含任意元素</p>
+                    
+                    <p>&lt;br/>换行</p>
+                    
+                    <p>&lt;hr>水平分隔</p>
+                    
+                    <p>h1-h6 h1表示当前页面标题，具有唯一性。使用时尽量不要跨级使用</p>
+                    
+                    <p>&lt;blockquote>表示引用，可以包含多个段落</p>
+                    
+                    <p>&lt;pre>表示一段格式化文本</p>
+                    
+                    <h4>头部元素</h4>
+                    
+                    <p>&lt;title>每个页面有且仅有一个title</p>
+                    
+                    <p>&lt;base>，用法&lt;base target="_blank">，用于大量链接都为新窗口打开的页面</p>
+                    
+                    <p>&lt;style>样式标签</p>
+                    
+                    <p>&lt;script>脚本标签</p>
+                    
+                    <p>&lt;noscript>用户代理不支持javascript的情况下提供说明</p>
+                    
+                    <h4>文本元素</h4>
+                    
+                    <p>&lt;a>存在href表示链接，不存在href且存在name表示锚点。（用作制作hover伪类样式除外）</p>
+                    
+                    <p>em, strong表示语义强调</p>
+                    
+                    <p>&lt;abbr>表示缩写</p>
+                    
+                    <p>&lt;sub>&lt;sup>主要用于数学和化学公式，sup可用于脚注</p>
+                    
+                    <p>&lt;span>对应于&lt;div>，联级的无含义标签</p>
+                    
+                    <p>&lt;ins>&lt;del>表示从文档中增加和删除</p>
+                    
+                    <h4>媒体元素</h4>
+                    
+                    <p>&lt;img>图片</p>
+                    
+                    <p>&lt;object>可用于插入flash</p>
+                    
+                    <p>&lt;iframe>内嵌页面</p>
+                    
+                    <h4>列表元素</h4>
+                    
+                    <p>&lt;dl>关联列表，dd是对dt的解释</p>
+                    
+                    <p>&lt;ul>无序列表</p>
+                    
+                    <p>&lt;ol>有序列表</p>
+                    
+                    <p>&lt;li>列表项，必须是ol或者ul的子元素</p>
+
                 </div>
             </article>
         <!-- ****************************************************************************************** -->
