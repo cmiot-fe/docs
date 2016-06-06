@@ -10,7 +10,7 @@
 }
 
 .form-horizontal .form-group {
-    padding: 20px 0;
+    padding: 10px 0;
     position: relative
 }
 
@@ -42,7 +42,7 @@
 .form-horizontal label,.form-horizontal .filed {
     vertical-align: top;
     text-align: left;
-    line-height: 40px
+    line-height: 44px
 }
 
 .form-horizontal label {
@@ -55,8 +55,8 @@
 }
 
 .form-horizontal input,.form-horizontal select {
-    line-height: 40px;
-    height: 40px
+    line-height: 42px;
+    height: 42px
 }
 
 .form-horizontal select {

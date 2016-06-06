@@ -78,6 +78,7 @@
                 <a class="docs-method-target" id="/color/intro/"  name="/color/intro/"></a>
                 <div class="docs-method-prose">
                     <p>颜色在系统中的应用是非常广泛，且非常重要的，适当的颜色搭配能够让系统更加『炫酷』。</p>
+                    <p>颜色代码已经在系统内置，使用less的时候即可调用，颜色代码在下面的示例中</p>
                 </div>
             </article>
             <article class="docs-method">
@@ -241,7 +242,7 @@
                 <div class="docs-method-prose">
                     <p>单选框、复选框插件（根据<a href="http://www.bootcss.com/p/icheck/" target="_blank">icheck.js</a>更改）</p>
                     <p>所有的初始化、回调事件、方法都一样</p>
-                    <p>本系统需要在module包里面进行引入</p>
+                    <p>本系统已引入该插件，但需要在该页面进行插件初始化，具体看下面示例</p>
                 </div>
             </article>
             <article class="docs-method">
