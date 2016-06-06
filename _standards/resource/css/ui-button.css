@@ -49,6 +49,43 @@
     background-color: #7a7e89;
     color: #fff;
 }
+.button.round {
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+    border-radius: 14px;
+    height: 28px;
+    padding: 0 15px;
+    display: inline-block;
+    -webkit-transition: all .2s ease-in;
+    -moz-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+    line-height: 28px;
+}
+.button.round.hollow {
+    border: 1px solid #00bff1;
+    background-color: #fff;
+    color: #00bff1;
+}
+.button.round.hollow:hover {
+    /*background-color: #00bff1;*/
+}
+.button.round.hollow:active {
+    color: #0ba2f1;
+    border-color: #0ba2f1;
+}
+.button.round.hollow.cold {
+    border: 1px solid #7a7e89;
+    background-color: #fff;
+    color: #7a7e89;
+}
+.button.round.hollow.cold:hover {
+    background-color: #b1b7c7;
+    color: #fff;
+}
+.button.round.hollow.cold:active {
+    background-color: #7a7e89;
+    color: #fff;
+}
 .button.expand {
     -webkit-border-radius: 14px;
     -moz-border-radius: 14px;

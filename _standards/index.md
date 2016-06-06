@@ -170,12 +170,16 @@
                     <p><a class="button">普通按钮</a></p>
                     <p><a class="button secondary">次要按钮</a></p>
                     <p><a class="button huge" disabled>登录按钮 或 展示按钮 禁用</a>&nbsp;&nbsp;<a class="button" disabled>禁用状态</a></p>
+                    <p><a class="button round">圆润按钮</a></p>
+                    <p><a class="button round hollow cold">圆润空心按钮</a></p>
 <pre>
 &lt;a class="button huge">登录按钮 或 展示按钮&lt;/a>
 &lt;a class="button">普通按钮&lt;/a>
 &lt;a class="button secondary">次要按钮&lt;/a>
 &lt;a class="button huge" disabled>登录按钮 或 展示按钮 禁用&lt;/a>&nbsp;&nbsp;
 &lt;a class="button" disabled>禁用状态&lt;/a>
+&lt;a class="button round">圆润按钮&lt;/a>
+&lt;a class="button round hollow cold">圆润空心按钮&lt;/a>
 </pre>
                     
                 </div>
