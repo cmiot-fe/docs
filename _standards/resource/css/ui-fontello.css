@@ -50,6 +50,9 @@
     /* Uncomment for 3D effect */
     /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
+[class='expand ']:before, [class=' expand']:before {
+    line-height: inherit;
+}
 
 .animate-spin {
     -moz-animation: spin 5s infinite linear;

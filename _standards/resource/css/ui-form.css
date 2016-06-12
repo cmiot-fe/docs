@@ -28,8 +28,9 @@
 }
 
 .form-horizontal .parsley-errors-list {
-    display: inline-block;
     position: absolute;
+    left: -10px;
+    z-index: 10;
 }
 
 .form-horizontal label,.form-horizontal input,.form-horizontal select,.form-horizontal .filed,.form-horizontal textarea {
