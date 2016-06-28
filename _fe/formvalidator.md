@@ -22,15 +22,13 @@ formvalidator已经打包到公用js文件里，无需单独引入
 
 ## 使用步骤
 
-1.为需要验证的表单项添加data-validation，如
+1.为form添加data-parsley-validate属性，为需要验证的表单项添加data-validation，如
+
+&lt;form `data-parsley-validate`>
 
 邮箱：&lt;input data-validation="email" type="text">
 
 2.添加相应的js
-
-    $.validate({
-        form : $('.test-form')
-    });
 
     $('.test-form').submit(function(e){
         e.preventDefault();
@@ -47,7 +45,7 @@ formvalidator已经打包到公用js文件里，无需单独引入
 
 ### 表单验证DEMO
 
-<form class="form-horizontal well test-form has-validation-callback" _lpchecked="1">
+<form class="form-horizontal well test-form has-validation-callback" data-parsley-validate>
     <div class="control-group">
         <label class="control-label">邮箱</label>
         <div class="controls">
@@ -139,9 +137,6 @@ formvalidator已经打包到公用js文件里，无需单独引入
 
 <script>
     window.onload = function(){
-        $.validate({
-                form : $('.test-form')
-        });
         $('.test-form').submit(function(e){
             e.preventDefault();
             if($('form').isValid()){
