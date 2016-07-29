@@ -6,3 +6,5 @@ collections:
       output: true
   standards:
       output: true
+  oneapp:
+        output: true

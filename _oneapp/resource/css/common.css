@@ -1,0 +1,286 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+body *{
+    font-family: "Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif !important;
+}
+.grid{
+    width: 1200px;
+    margin: 0 auto;
+}
+.header{
+    color: #18bbfc;
+    margin: 10px auto;
+}
+.split-line{
+    border-bottom: 2px solid #18bbfc;
+}
+.header h1{
+    font-size: 18px;
+    font-weight: 400;
+}
+.content{
+    position: relative;
+}
+.content .content-main{
+    width: 900px;
+    margin-left: 300px;
+}
+.content .content-aside{
+    width: 300px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+/* Docs for nav */
+.content-aside dl,.content-aside dd{
+    padding-left: 15px;
+}
+.active-index .section-index
+.docs-nav {
+    font-family: 'Montserrat', 'Microsoft Yahei', sans-serif;
+    padding: 20px;
+    overflow-y: auto;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.docs-nav .active a {
+    border-left-color: rgba(0, 192, 241, 0.3);
+}
+
+.docs-nav .active {
+    border-left-color: rgba(78, 124, 173, 0.3);
+}
+
+.docs-nav a {
+    display: block;
+    text-decoration: none;
+    border-left: 2px solid transparent
+}
+
+.docs-nav a:hover, .docs-nav a.active {
+    background: rgba(0, 192, 241, 0.1);
+    border-left-color: #00c0f1
+}
+
+.docs-nav a:hover, .docs-nav a.active {
+    background: rgba(78, 124, 173, 0.1);
+    border-left-color: #4e7cad
+}
+
+.docs-nav-section-title,.docs-nav-item,.docs-item-sub{
+    color: #333;
+    padding: 3px 0;
+}
+
+.docs-nav-section-title:hover,.docs-nav-item:hover,.docs-item-sub:hover,.docs-nav-section-title.active,.docs-nav-item.active,.docs-item-sub.active{
+    color: #4e7cad
+}
+
+.docs-nav-section-title {
+    padding-left: 5px
+}
+
+
+.docs-nav-item {
+    padding-left: 25px
+}
+
+.docs-item-sub {
+    padding-left: 45px
+}
+
+.docs-nav-section .docs-nav-item {
+    display: none
+}
+
+.docs-nav-section.active .docs-nav-item {
+    display: block
+}
+
+
+
+
+
+
+
+/*文档详情*/
+.doc-detail h1, .doc-detail h2, .doc-detail h3, .doc-detail h4, .doc-detail h5, .doc-detail h6 {
+    margin: 1em 0;
+    font-weight: 400;
+}
+
+.doc-detail hr {
+    height: 1px;
+    border: 0;
+    color: #CCCCCC;
+    background-color: #eee;
+}
+
+.doc-detail p, .doc-detail blockquote, .doc-detail ul, .doc-detail ol, .doc-detail dl, .doc-detail li, .doc-detail table, .doc-detail pre {
+    margin: 15px 0;
+}
+
+.doc-detail p{
+    line-height: 2em;
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.doc-detail pre {
+    background-color: #F8F8F8;
+    overflow: auto;
+    padding: 15px;
+}
+
+.doc-detail pre.prettyprint{
+    border: 0 none;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.doc-detail pre code {
+    background-color: #F8F8F8;
+    border: none;
+    padding: 0;
+    font-size: 14px;
+    color: #555;
+    font-weight: 100;
+    line-height: 2em;
+}
+
+.doc-detail pre > code {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+code {
+    color: #fe0088;
+    padding: 0 0.2em;
+    line-height: 1.5em;
+    background: transparent;
+}
+
+.doc-detail table{
+    border-radius: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+}
+.doc-detail thead, .doc-detail tfoot{
+    background: #eee;
+}
+.doc-detail th,.doc-detail td{
+    border: 1px solid #ddd;
+}
+.doc-detail tr:nth-child(even) {
+    background: #eee;
+}
+
+
+
+::-moz-selection{background:rgba(255,255,0,0.3);color:#000}
+::selection{background:rgba(255,255,0,0.3);color:#000}
+
+a::-moz-selection{background:rgba(255,255,0,0.3);color:#0645ad}
+a::selection{background:rgba(255,255,0,0.3);color:#0645ad}
+
+.doc-detail blockquote{
+    color:#666666;
+    margin:0;
+    padding: 0.5em 0 0.5em 2em;
+}
+.doc-detail blockquote p{
+    margin: 0;
+}
+
+
+.doc-detail ul, .doc-detail ol {
+    padding: 5px 2em;
+    background-color: #F9F9F9;
+}
+.doc-detail li p:last-child { margin:0 }
+.doc-detail dd { margin: 0 0 0 2em; }
+
+.doc-detail img {
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+    vertical-align: middle;
+    max-width:100%;
+    display: block;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+/* Pretty printing styles. Used with prettify.js. */
+
+/* SPAN elements with the classes below are added by prettyprint. */
+.pln { color: #000 }  /* plain text */
+
+@media screen {
+    .str { color: #080 }  /* string content */
+    .kwd { color: #008 }  /* a keyword */
+    .com { color: #800 }  /* a comment */
+    .typ { color: #606 }  /* a type name */
+    .lit { color: #066 }  /* a literal value */
+    /* punctuation, lisp open bracket, lisp close bracket */
+    .pun, .opn, .clo { color: #660 }
+    .tag { color: #008 }  /* a markup tag name */
+    .atn { color: #606 }  /* a markup attribute name */
+    .atv { color: #080 }  /* a markup attribute value */
+    .dec, .var { color: #606 }  /* a declaration; a variable name */
+    .fun { color: red }  /* a function name */
+}
+
+/* Use higher contrast and text-weight for printable form. */
+@media print, projection {
+    .str { color: #060 }
+    .kwd { color: #006; font-weight: bold }
+    .com { color: #600; font-style: italic }
+    .typ { color: #404; font-weight: bold }
+    .lit { color: #044 }
+    .pun, .opn, .clo { color: #440 }
+    .tag { color: #006; font-weight: bold }
+    .atn { color: #404 }
+    .atv { color: #060 }
+}
+
+/* Put a border around prettyprinted code snippets. */
+pre.prettyprint { padding: 2px; border: 1px solid #888 }
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums { margin-top: 0; margin-bottom: 0 } /* IE indents via margin-left */
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L5,
+li.L6,
+li.L7,
+li.L8 { list-style-type: none }
+/* Alternate shading for lines */
+li.L1,
+li.L3,
+li.L5,
+li.L7,
+li.L9 { background: #eee }

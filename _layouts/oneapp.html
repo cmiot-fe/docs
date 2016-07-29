@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>
+        {{ page.title }}
+    </title>
+    <link href="resource/css/common.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="header grid">
+        <h1>OneAPP文档中心</h1>
+    </div>
+    <div class="split-line"></div>
+    <div class="content grid">
+        <div class="content-main">
+            <div class="doc-detail">
+                {{ content }}
+            </div>
+        </div>
+        <div class="content-aside">
+            <div class="docs-nav">
+                <div class="docs-nav-section {{ page.indexActive }}">
+                    <a class="docs-nav-section-title" href="#/btn/">主设备API</a>
+                    <a class="docs-nav-item" href="#/btn/">可读属性</a>
+                    <a class="docs-nav-item" href="#/btn/">事件</a>
+                    <a class="docs-nav-item docs-item-sub" href="#/btn/normal/">DA.bindPushData</a>
+                    <a class="docs-nav-item docs-item-sub" href="#/btn/icon/">DA.onWebViewData</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="resource/js/jquery-1.11.1.min.js"></script>
+    <script src="resource/js/prettify.js"></script>
+
+
+    <script>
+        (function(){
+            function clickTarget($target){
+                $target.addClass('active').siblings().removeClass('active');
+            }
+            $(function() {
+                $('pre').addClass('prettyprint');
+                prettyPrint();
+
+                $('.docs-nav-item').click(function(){
+                    clickTarget($(this));
+                });
+
+                var hash = location.hash;
+                if(hash){
+                    $('.docs-nav-section.active a').each(function(){
+                        var $target = $(this);
+                        if($target.attr('href') == hash){
+                            clickTarget($target);
+                        }
+                    })
+                }
+            });
+        })();
+
+    </script>
+</body>
+</html>
