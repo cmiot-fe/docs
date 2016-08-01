@@ -18,9 +18,11 @@ JSSDK是面向开发者的开放平台，提供App底层服务，通用规范的
 
 <h3 id="_1">设备状态</h3>
 
-<h4 id="OJSdevicegetSensorData">OJS.device.getSensorData(sensorName)</h4>
+<h4 id="OJSdevicegetSensorData">OJS.device.getSensorData(sensorName|sensorNameList)</h4>
 
-获取sensorName对应的传感器的最新值
+获取sensorName对应的传感器的最新值。
+
+sensorName如为字符串则获取一个传感器的值，sensorName若为数组则获取数组里所有传感器的值
 
 <h4 id="OJSdevicesendNotify">OJS.device.sendNotify()</h4>
 
