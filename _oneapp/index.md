@@ -28,6 +28,10 @@ sensorName如为字符串则获取一个传感器的值，sensorName若为数组
 
 指定设备id，发送即时通知(命令)
 
+<h4 id="OJSbindReady()">OJS.device.bindReady(callback)</h4>
+
+设备加载完成后执行的回调，设备加载主要是向后端发请求请求在线状态和传感器数据，加载成功后执行callback。在这之前无法获取在线状态和传感器数据。
+
 <h4 id="OJSdevicebindPushData()">OJS.device.bindPushData()</h4>
 
 绑定平台推送的设备状态变化信息，包括：设备在线状态变更，传感数据属性值变化，设备告警事件，通知确认及响应
