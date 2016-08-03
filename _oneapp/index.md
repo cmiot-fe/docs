@@ -8,7 +8,27 @@
 
 JSSDK是面向开发者的开放平台，提供App底层服务，通用规范的UI组件，和面向用户的底层API，开发者可以使用我们通用的UI组件组件设备页面，也可以选择自定义设备功能，开发出个性化定制设备页面，我们对于开发者的要求是：
 
+`测试地址`
+
+<http://183.230.40.32/ojs/demo.html>
+
+## 测试的时候在页面写死deviceID和token
+
+token获取地址： <http://172.19.3.69:8082/subs_token/211994>
+
+    var __DEBUG_DEVICE_ID = 211994;
+    var __DEBUG_DEVICE_TOKEN = '6mzVvtJ7lXg=';
+
 # 主设备api
+
+<h4 id="OJSbindReady()">OJS.bindReady(callback)</h4>
+
+    OJS.bindReady(function(){
+        console.log('bindReady', OJS.device.id, OJS.device.getSensorData());
+    });
+
+SDK加载完成后执行的回调，SDK加载主要是向后端发请求请求在线状态和传感器数据以及与APP的接口连接，加载成功后执行callback。在这之前无法获取在线状态和传感器数据，也无法调用OJS.app，以及OJS.ui的接口
+
 
 <h3 id="_1">可读属性</h3>
 
@@ -22,65 +42,80 @@ JSSDK是面向开发者的开放平台，提供App底层服务，通用规范的
 
 获取sensorName对应的传感器的最新值。
 
-sensorName如为字符串则获取一个传感器的值，sensorName若为数组则获取数组里所有传感器的值
+sensorName如为字符串则获取一个传感器的值，sensorName若为数组则获取数组里所有传感器的值，sensorName若为空则返回所有
 
-<h4 id="OJSdevicesendNotify">OJS.device.sendNotify()</h4>
+注意返回的传感器状态可能为undefined，因为传感器可能还并没有值。
+
+<h4 id="OJSdevicesendNotify">OJS.device.sendNotify(message, sendCallBack, responseCallBack)</h4>
 
 指定设备id，发送即时通知(命令)
 
-<h4 id="OJSbindReady()">OJS.device.bindReady(callback)</h4>
+    OJS.device.sendNotify({
+        sayhello:'helloMyGirl'
+    }, function(){
+        console.log('命令已经下发');
+    }, function(){
+        console.log('设备已经收到命令！');
+    });
 
-设备加载完成后执行的回调，设备加载主要是向后端发请求请求在线状态和传感器数据，加载成功后执行callback。在这之前无法获取在线状态和传感器数据。
 
 <h4 id="OJSdevicebindPushData()">OJS.device.bindPushData()</h4>
 
 绑定平台推送的设备状态变化信息，包括：设备在线状态变更，传感数据属性值变化，设备告警事件，通知确认及响应
 
-   OJS.device.bindPushData({
-       'netWorkStatusChange': function(data){
-           console.log('netWorkStatusChange', data);
-       }
-   }); //在线状态变更
+    OJS.device.bindPushData({
+        'netWorkStatusChange': function(data){
+            console.log('netWorkStatusChange', data);
+        }
+    }); //在线状态变更
 
-   OJS.device.bindPushData({
+    OJS.device.bindPushData({
        'deviceStatusChange': function(data){
            console.log('deviceStatusChange', data);
        }
-   }); //传感器上报了数据
+    }); //传感器上报了数据
 
 # APP资源
 
-<h3 id="OJSappisNetworkOK">OJS.app.isNetworkOK()</h3>
+<h3 id="OJSapphasNetWork">OJS.app.hasNetWork(callback)</h3>
 
 判断当前手机是否有网络
 
+    OJS.app.hasNetWork(function(data){debug(data ? '当前有网络' : '当前无网络')})
+
 # UI
 
-<h3 id="OJSUInavigationConfig">OJS.UI.navigationConfig()</h3>
+<h3 id="OJSUInavigationConfig">OJS.ui.navigationConfig() 暂未实现</h3>
 
 配置顶部导航按钮（内容包括：返回键、更多）
 
-<h3 id="OJSUIloadPage">OJS.UI.loadPage()</h3>
+<h3 id="OJSUIloadPage">OJS.ui.loadPage(url)</h3>
 
 跳转到新页面
 
-<h3 id="OJSUIback">OJS.UI.back()</h3>
+    OJS.app.loadPage('http://www.baidu.com')
 
-返回上一页面
+<h3 id="OJSUIback">OJS.ui.back()</h3>
 
-<h3 id="OJSUIalert">OJS.UI.navigationConfig()</h3>
+返回上一页面，目前仅仅调用了一次history.back()
 
-统一确认对话框
-
-<h3 id="OJSUItoast">OJS.UI.toast()</h3>
+<h3 id="OJSUItoast">OJS.ui.toast(message)</h3>
 
 统一信息提示
 
-<h3 id="OJSUIshowNotOnlineMask">OJS.UI.toast()</h3>
+    OJS.ui.toast('toast的信息')
+
+<h3 id="OJSUItoast">OJS.ui.alert(title, message, button)</h3>
+
+统一信息提示
+
+    OJS.ui.alert('标题', '内容', '按钮')
+
+<h3 id="OJSUIshowNotOnlineMask">OJS.ui.showOfflineMask()</h3>
 
 显示设备断网遮罩层
 
-<h3 id="OJS.UI.hideNotOnlineMask">OJS.UI.hideNotOnlineMask()</h3>
+<h3 id="OJS.UI.hideNotOnlineMask">OJS.ui.hideOfflineMask()</h3>
 
 隐藏设备断网遮罩层
 

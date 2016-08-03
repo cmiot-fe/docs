@@ -126,6 +126,7 @@ body *{
 .doc-detail h1, .doc-detail h2, .doc-detail h3, .doc-detail h4, .doc-detail h5, .doc-detail h6 {
     margin: 1em 0;
     font-weight: 400;
+    color: #08b3dc;
 }
 
 .doc-detail hr {
