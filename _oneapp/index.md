@@ -21,14 +21,22 @@ token获取地址： <http://172.19.3.69:8082/subs_token/211994>
 
 # 主设备api
 
+<h4 id="OJSbindReady()">OJS.bindAppReady(callback)</h4>
+
+    OJS.bindAppReady(function(){
+        console.log('bindAppReady');
+        OJS.app.toast('已经可以调用app的api了');
+    });
+
+因为OJS调用app的api需要先异步与app建立连接，因此需要注册此事件，当可以使用OJS.app的api后触发。
+
 <h4 id="OJSbindReady()">OJS.bindReady(callback)</h4>
 
     OJS.bindReady(function(){
         console.log('bindReady', OJS.device.id, OJS.device.getSensorData());
     });
 
-SDK加载完成后执行的回调，SDK加载主要是向后端发请求请求在线状态和传感器数据以及与APP的接口连接，加载成功后执行callback。在这之前无法获取在线状态和传感器数据，也无法调用OJS.app，以及OJS.ui的接口
-
+当OJS与app的api建立了连接，也与服务器建立了连接后并得到了设备当前数据后触发。在此之前无法获取设备的任何相关信息。
 
 <h3 id="_1">可读属性</h3>
 
