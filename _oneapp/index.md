@@ -50,13 +50,18 @@ sensorName如为字符串则获取一个传感器的值，sensorName若为数组
 
 指定设备id，发送即时通知(命令)
 
-    OJS.device.sendNotify({
+发送成功返回true，发送失败返回false。发送失败的原因为socket已离线。
+
+    var result = OJS.device.sendNotify({
         sayhello:'helloMyGirl'
     }, function(){
         console.log('命令已经下发');
     }, function(){
         console.log('设备已经收到命令！');
     });
+    if(!result){
+        console.log('命令发送失败，无法连接到服务器');
+    }
 
 
 <h4 id="OJSdevicebindPushData()">OJS.device.bindPushData()</h4>
@@ -83,33 +88,33 @@ sensorName如为字符串则获取一个传感器的值，sensorName若为数组
 
     OJS.app.hasNetWork(function(data){debug(data ? '当前有网络' : '当前无网络')})
 
-# UI
-
-<h3 id="OJSUInavigationConfig">OJS.ui.navigationConfig() 暂未实现</h3>
+<h3 id="OJSUInavigationConfig">OJS.app.navigationConfig() 暂未实现</h3>
 
 配置顶部导航按钮（内容包括：返回键、更多）
 
-<h3 id="OJSUIloadPage">OJS.ui.loadPage(url)</h3>
+<h3 id="OJSUIloadPage">OJS.app.loadPage(url)</h3>
 
 跳转到新页面
 
     OJS.app.loadPage('http://www.baidu.com')
 
-<h3 id="OJSUIback">OJS.ui.back()</h3>
+<h3 id="OJSUIback">OJS.app.back()</h3>
 
 返回上一页面，目前仅仅调用了一次history.back()
 
-<h3 id="OJSUItoast">OJS.ui.toast(message)</h3>
+<h3 id="OJSUItoast">OJS.app.toast(message)</h3>
 
 统一信息提示
 
-    OJS.ui.toast('toast的信息')
+    OJS.app.toast('toast的信息')
 
-<h3 id="OJSUItoast">OJS.ui.alert(title, message, button)</h3>
+<h3 id="OJSUItoast">OJS.app.alert(title, message, button)</h3>
 
 统一信息提示
 
-    OJS.ui.alert('标题', '内容', '按钮')
+    OJS.app.alert('标题', '内容', '按钮')
+
+# UI
 
 <h3 id="OJSUIshowNotOnlineMask">OJS.ui.showOfflineMask()</h3>
 
