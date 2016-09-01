@@ -6,13 +6,15 @@
 
 # 快速开始
 
-JSSDK是面向开发者的开放平台，提供App底层服务，通用规范的UI组件，和面向用户的底层API，开发者可以使用我们通用的UI组件组件设备页面，也可以选择自定义设备功能，开发出个性化定制设备页面，我们对于开发者的要求是：
+JSSDK开发者在开发和物APP的设备操作界面所用到的sdk，通过JSSDK可以调用设备的各种数据、调用原生的手机api，向设备发送命令。
 
 `测试地址`
 
 <http://183.230.40.32/ojs/demo.html>
 
 ## 测试的时候在页面写死deviceID和token
+
+为了让开发者在PC端调试页面，可以在开发的时候写死deviceID和token，这样PC端打开调试页面的时候便能顺利的得到设备的信息，也可以发送命令，但是无法调用OJS.app相关api。
 
 token获取地址： <http://172.19.3.69:8082/subs_token/211994>
 
@@ -28,7 +30,7 @@ token获取地址： <http://172.19.3.69:8082/subs_token/211994>
         OJS.app.toast('已经可以调用app的api了');
     });
 
-因为OJS调用app的api需要先异步与app建立连接，因此需要注册此事件，当可以使用OJS.app的api后触发。
+因为OJS调用app的api需要先异步与app建立连接，因此需要注册此事件。在appReady前无法使用用OJS.app的api。
 
 <h4 id="OJSbindReady()">OJS.bindReady(callback)</h4>
 
