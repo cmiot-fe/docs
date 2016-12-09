@@ -2,6 +2,8 @@ markdown: kramdown
 collections:
   fe:
       output: true
+  zt:
+      output: true
   team:
       output: true
   standards:
