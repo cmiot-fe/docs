@@ -12,13 +12,14 @@ JSSDK开发者在开发和物APP的设备操作界面所用到的sdk，通过JSS
 
 <h4 id="jsbind">jsSDK引入地址</h4>
 
-http://appapi.heclouds.com/sdk/ojs.min.js?v=1.0 
+    http://appapi.heclouds.com/sdk/ojs.min.js?v=1.0 
 
 <h4 id="cssbind">css引入地址</h4>
 
-http://appapi.heclouds.com/sdk/ojs.min.css?v=1.0 
+    http://appapi.heclouds.com/sdk/ojs.min.css?v=1.0 
 
 `注意事项`
+
 jsSDK引入地址内包含了zepto库，所以开发的时候无需再引入其他操作dom的库，比如:jquery、zepto等。另外jsSDK内部有提供当设备离线的时候显示的样式。
 jsSDK返回的值为json对象，不需要转换。
 
@@ -51,7 +52,7 @@ jsSDK返回的值为json对象，不需要转换。
 
 <h4 id="OJSdevicegetSensorData">OJS.device.getSensorData(sensorName|sensorNameList)</h4>
 
-获取sensorName对应的传感器的最新值。比如获取单个属性的值:OJS.device.getSensorData("xx") 将会返回xx的值
+获取sensorName对应的传感器的最新值。
 
 sensorName如为字符串则获取一个传感器的值，sensorName若为数组则获取数组里所有传感器的值，sensorName若为空则返回所有
 
@@ -93,7 +94,7 @@ sensorName如为字符串则获取一个传感器的值，sensorName若为数组
 
 # APP资源
 
-调用UI的时候需要注意需要在bindAppReady后才能调用成功
+调用UI的时候需要在bindAppReady后才能调用成功
 
 <h3 id="OJSapphasNetWork">OJS.app.hasNetWork(callback)</h3>
 
@@ -137,3 +138,16 @@ sensorName如为字符串则获取一个传感器的值，sensorName若为数组
 
 隐藏设备断网遮罩层
 
+# Notes
+
+下发命令的时候，需要将模板上有的所有值一起传过去，如果是不需要的值需要传递其值为`null`，其他的值则是什么类型对应写成如下形式：
+
+    { 
+        deviceStatus: { Boolean: true},
+        val: {int: 22},
+        set: null
+    }
+
+# 调试
+
+可以使用chrome调试工具进行调试 chrome://inspect
