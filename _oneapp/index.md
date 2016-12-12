@@ -18,7 +18,9 @@ http://appapi.heclouds.com/sdk/ojs.min.js?v=1.0
 
 http://appapi.heclouds.com/sdk/ojs.min.css?v=1.0 
 
->jsSDK引入地址内包含了zepto库，所以开发的时候无需再引入其他操作dom的库，比如:jquery、zepto等。另外jsSDK内部有提供当设备离线的时候显示的样式。
+`注意事项`
+jsSDK引入地址内包含了zepto库，所以开发的时候无需再引入其他操作dom的库，比如:jquery、zepto等。另外jsSDK内部有提供当设备离线的时候显示的样式。
+jsSDK返回的值为json对象，不需要转换。
 
 # 主设备api
 
@@ -49,7 +51,7 @@ http://appapi.heclouds.com/sdk/ojs.min.css?v=1.0
 
 <h4 id="OJSdevicegetSensorData">OJS.device.getSensorData(sensorName|sensorNameList)</h4>
 
-获取sensorName对应的传感器的最新值。
+获取sensorName对应的传感器的最新值。比如获取单个属性的值:OJS.device.getSensorData("xx") 将会返回xx的值
 
 sensorName如为字符串则获取一个传感器的值，sensorName若为数组则获取数组里所有传感器的值，sensorName若为空则返回所有
 
@@ -90,6 +92,8 @@ sensorName如为字符串则获取一个传感器的值，sensorName若为数组
     }); //传感器上报了数据
 
 # APP资源
+
+调用UI的时候需要注意需要在bindAppReady后才能调用成功
 
 <h3 id="OJSapphasNetWork">OJS.app.hasNetWork(callback)</h3>
 
