@@ -8,17 +8,17 @@
 
 JSSDK开发者在开发和物APP的设备操作界面所用到的sdk，通过JSSDK可以调用设备的各种数据、调用原生的手机api，向设备发送命令。
 
-#引入方式
+# 引入方式
 
-jsjdk引入地址
+<h4 id="jsbind">jsSDK引入地址</h4>
 
 http://appapi.heclouds.com/sdk/ojs.min.js?v=1.0 
 
-css引入地址
+<h4 id="cssbind">css引入地址</h4>
 
 http://appapi.heclouds.com/sdk/ojs.min.css?v=1.0 
 
->jsjdk内包含了zepto库，所以开发的时候无需再引入其他操作dom的库，比如:jquery、zepto等。另外模块内部有提供当设备离线的时候显示的样式。
+>jsSDK引入地址内包含了zepto库，所以开发的时候无需再引入其他操作dom的库，比如:jquery、zepto等。另外jsSDK内部有提供当设备离线的时候显示的样式。
 
 # 主设备api
 
