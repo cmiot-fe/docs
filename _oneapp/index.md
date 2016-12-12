@@ -20,7 +20,7 @@ JSSDK开发者在开发和物APP的设备操作界面所用到的sdk，通过JSS
 
 `注意事项`
 
-jsSDK引入地址内包含了zepto库，所以开发的时候无需再引入其他操作dom的库，比如:jquery、zepto等。另外jsSDK内部有提供当设备离线的时候显示的样式。
+jsSDK内包含了zepto库，所以开发的时候无需再引入其他操作dom的库，比如:jquery、zepto等。另外jsSDK内部有提供当设备离线的时候显示的样式。
 jsSDK返回的值为json对象，不需要转换。
 
 # 主设备api
