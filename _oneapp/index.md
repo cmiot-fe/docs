@@ -8,18 +8,17 @@
 
 JSSDK开发者在开发和物APP的设备操作界面所用到的sdk，通过JSSDK可以调用设备的各种数据、调用原生的手机api，向设备发送命令。
 
-`测试地址`
+#引入方式
 
-<http://183.230.40.32/ojs/demo.html>
+jsjdk引入地址
 
-## 测试的时候在页面写死deviceID和token
+http://appapi.heclouds.com/sdk/ojs.min.js?v=1.0 
 
-为了让开发者在PC端调试页面，可以在开发的时候写死deviceID和token，这样PC端打开调试页面的时候便能顺利的得到设备的信息，也可以发送命令，但是无法调用OJS.app相关api。
+css引入地址
 
-token获取地址： <http://172.19.3.69:8082/subs_token/211994>
+http://appapi.heclouds.com/sdk/ojs.min.css?v=1.0 
 
-    var __DEBUG_DEVICE_ID = 211994;
-    var __DEBUG_DEVICE_TOKEN = '6mzVvtJ7lXg=';
+>jsjdk内包含了zepto库，所以开发的时候无需再引入其他操作dom的库，比如:jquery、zepto等。另外模块内部有提供当设备离线的时候显示的样式。
 
 # 主设备api
 
