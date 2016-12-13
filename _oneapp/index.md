@@ -154,7 +154,7 @@ sensorName如为字符串则获取一个传感器的值，sensorName若为数组
 
 # dopm包规范
 
-将页面做好后需要在`当前目录`打包上传至onenet平台，包名称为:dopm.zip
+将页面做好后需要在`当前目录`打包上传至onenet平台
 
 dopm包格式应如下：
 
@@ -162,6 +162,9 @@ dopm包格式应如下：
 
     2. 包名为dopm.zip
 
+    3. home-config.js用于app content展示(这个是显示的是设备列表页面上面信息的,不是进入h5页面里面的内容)
+
+包结构
 
     dopm (设备的model name)目录层数5，每层目录10，总文件200
     ├── home-config.js (设备配置文件 用于配置首页展示的设备信息)必须有
@@ -178,9 +181,6 @@ dopm包格式应如下：
     │   ... app.html
     │   ... app.js
     │   ├──css
-
-
-    3. home-config.js用于app content展示(这个是显示的是设备列表页面上面信息的,不是进入h5页面里面的内容)
 
 attr_name传感器模板中的属性
 
