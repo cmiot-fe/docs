@@ -158,8 +158,9 @@ sensorName如为字符串则获取一个传感器的值，sensorName若为数组
 
 dopm包格式应如下：
 
-1.	代码都应该是UTF-8编码，不然中方可能乱码。
-2.	包名为dopm.zip
+1.代码都应该是UTF-8编码，不然中方可能乱码。
+
+2.包名为dopm.zip
 
     dopm (设备的model name)目录层数5，每层目录10，总文件200
     ├── home-config.js (设备配置文件 用于配置首页展示的设备信息)必须有
@@ -180,22 +181,27 @@ dopm包格式应如下：
 3.	home-config.js用于app content展示
 
 attr_name传感器模板中的属性
+
 vaule_enum属性枚举展示值
+
 unit 属性展示单位
+
 nick_name属性前端展示值
 
 例子：
 
     var config =[
-    {"attr_name":"属性名1",
-    "value_enum":{"1":"test","2":"test1"},
-    "unit":"℃",
-    "nick_name":"展示名称"
-            },
-    {"attr_name":"属性名1",
-    "value_enum":{"1":"test","2":"test1"},
-    "unit":"℃",
-    "nick_name":"展示名称"
-            }
+        {
+            "attr_name":"属性名1",
+            "value_enum":{"1":"test","2":"test1"},
+            "unit":"℃",
+            "nick_name":"展示名称"
+        },
+        {
+            "attr_name":"属性名1",
+            "value_enum":{"1":"test","2":"test1"},
+            "unit":"℃",
+            "nick_name":"展示名称"
+        }
     ]
     
