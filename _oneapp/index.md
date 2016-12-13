@@ -158,9 +158,10 @@ sensorName如为字符串则获取一个传感器的值，sensorName若为数组
 
 dopm包格式应如下：
 
-1. 代码都应该是UTF-8编码，不然中方可能乱码。
+    1. 代码都应该是UTF-8编码，不然中方可能乱码。
 
-2. 包名为dopm.zip
+    2. 包名为dopm.zip
+
 
     dopm (设备的model name)目录层数5，每层目录10，总文件200
     ├── home-config.js (设备配置文件 用于配置首页展示的设备信息)必须有
@@ -178,7 +179,8 @@ dopm包格式应如下：
     │   ... app.js
     │   ├──css
 
-3. home-config.js用于app content展示(这个是显示的是设备列表页面上面信息的,不是进入h5页面里面的内容)
+
+    3. home-config.js用于app content展示(这个是显示的是设备列表页面上面信息的,不是进入h5页面里面的内容)
 
 attr_name传感器模板中的属性
 
