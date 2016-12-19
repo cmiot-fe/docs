@@ -148,6 +148,15 @@ sensorName如为字符串则获取一个传感器的值，sensorName若为数组
         set: null
     }
 
+`注意`
+
+如果模板上定义的属性为不可为空，则不需要像上面声明式的传值，直接写就可以了：
+
+    {
+        deviceStatus: 100,
+        val: true
+    }
+
 # 调试
 
 可以使用chrome调试工具进行调试 chrome://inspect
