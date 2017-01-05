@@ -12,7 +12,7 @@ JSSDK开发者在开发和物APP的设备操作界面所用到的sdk，通过JSS
 
 <h4 id="jsbind">jsSDK引入地址</h4>
 
-    http://appapi.heclouds.com/sdk/ojs.min.js?v=1.0 
+    http://appapi.heclouds.com/sdk/ojs.min.js?v=1.0.1
 
 <h4 id="cssbind">css引入地址</h4>
 
@@ -47,6 +47,8 @@ jsSDK返回的值为json对象，不需要转换。
 + `OJS.device.id`获取设备id
 
 + `OJS.device.onlineStatus`在线状态：1在线，0不在线
+
++ `OJS.userId`获取用户ID
 
 <h3 id="_1">设备状态</h3>
 
