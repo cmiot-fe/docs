@@ -159,6 +159,8 @@ sensorName如为字符串则获取一个传感器的值，sensorName若为数组
         val: true
     }
 
+可参考ONENET开发文档 :  [私有协议模板和内容](http://open.iot.10086.cn/doc/art271.html#70 )
+
 # 调试
 
 可以使用chrome调试工具进行调试 chrome://inspect
