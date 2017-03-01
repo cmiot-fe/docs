@@ -12,7 +12,7 @@ JSSDK开发者在开发和物APP的设备操作界面所用到的sdk，通过JSS
 
 <h4 id="jsbind">jsSDK引入地址</h4>
 
-    http://appapi.heclouds.com/sdk/ojs.min.js?v=1.0.1
+    http://appapi.heclouds.com/sdk/ojs.min.js?v=1.0.2
 
 <h4 id="cssbind">css引入地址</h4>
 
@@ -49,6 +49,8 @@ jsSDK返回的值为json对象，不需要转换。
 + `OJS.device.onlineStatus`在线状态：1在线，0不在线
 
 + `OJS.userId`获取用户ID
+
++ `OJS.secret`获取用户secret
 
 <h3 id="_1">设备状态</h3>
 
@@ -140,26 +142,17 @@ sensorName如为字符串则获取一个传感器的值，sensorName若为数组
 
 隐藏设备断网遮罩层
 
-# Other
+# 通知下发
 
-下发命令的时候，需要将模板上有的所有值一起传过去，如果是不需要的值需要传递其值为`null`，其他的值则是什么类型对应写成如下形式：
-
-    { 
-        deviceStatus: { Boolean: true},
-        val: {int: 22},
-        set: null
-    }
-
-`注意`
-
-如果模板上定义的属性为不可为空，则不需要像上面声明式的传值，直接写就可以了：
+下发命令的时候，只需要将当前的值以json形式传过去就可以：
 
     {
-        deviceStatus: 100,
-        val: true
+        state: true
     }
 
-可参考ONENET开发文档 :  [私有协议模板和内容](http://open.iot.10086.cn/doc/art271.html#70 )
+>如果当前值有不可为空的也需要同时传值过去
+
+~~可参考ONENET开发文档 :  [私有协议模板和内容](http://open.iot.10086.cn/doc/art271.html#70 )~~
 
 # 调试
 
