@@ -8,18 +8,20 @@
 
 JSSDK开发者在开发和物APP的设备操作界面所用到的sdk，通过JSSDK可以调用设备的各种数据、调用原生的手机api，向设备发送命令。
 
-`测试地址`
+# 引入方式
 
-<http://183.230.40.32/ojs/demo.html>
+<h4 id="jsbind">jsSDK引入地址</h4>
 
-## 测试的时候在页面写死deviceID和token
+    http://appapi.heclouds.com/sdk/ojs.min.js?v=1.0.2
 
-为了让开发者在PC端调试页面，可以在开发的时候写死deviceID和token，这样PC端打开调试页面的时候便能顺利的得到设备的信息，也可以发送命令，但是无法调用OJS.app相关api。
+<h4 id="cssbind">css引入地址</h4>
 
-token获取地址： <http://172.19.3.69:8082/subs_token/211994>
+    http://appapi.heclouds.com/sdk/ojs.min.css?v=1.0 
 
-    var __DEBUG_DEVICE_ID = 211994;
-    var __DEBUG_DEVICE_TOKEN = '6mzVvtJ7lXg=';
+`注意事项`
+
+jsSDK内包含了zepto库，所以开发的时候无需再引入其他操作dom的库，比如:jquery、zepto等。另外jsSDK内部有提供当设备离线的时候显示的样式。
+jsSDK返回的值为json对象，不需要转换。
 
 # 主设备api
 
@@ -45,6 +47,10 @@ token获取地址： <http://172.19.3.69:8082/subs_token/211994>
 + `OJS.device.id`获取设备id
 
 + `OJS.device.onlineStatus`在线状态：1在线，0不在线
+
++ `OJS.userId`获取用户ID
+
++ `OJS.secret`获取用户secret
 
 <h3 id="_1">设备状态</h3>
 
@@ -92,6 +98,8 @@ sensorName如为字符串则获取一个传感器的值，sensorName若为数组
 
 # APP资源
 
+调用UI的时候需要在bindAppReady后才能调用成功
+
 <h3 id="OJSapphasNetWork">OJS.app.hasNetWork(callback)</h3>
 
 判断当前手机是否有网络
@@ -134,3 +142,74 @@ sensorName如为字符串则获取一个传感器的值，sensorName若为数组
 
 隐藏设备断网遮罩层
 
+# 通知下发
+
+下发命令的时候，只需要将当前的值以json形式传过去就可以：
+
+    {
+        state: true
+    }
+
+>如果当前值有不可为空的也需要同时传值过去
+
+~~可参考ONENET开发文档 :  [私有协议模板和内容](http://open.iot.10086.cn/doc/art271.html#70 )~~
+
+# 调试
+
+可以使用chrome调试工具进行调试 chrome://inspect
+
+# dopm包规范
+
+将页面做好后需要在`当前目录`打包上传至onenet平台
+
+dopm包格式应如下：
+
+    1. 代码都应该是UTF-8编码，不然中方可能乱码。
+
+    2. 包名为dopm.zip
+
+    3. home-config.js用于app content展示(这个是显示的是设备列表页面上面信息的,不是进入h5页面里面的内容)
+
+包结构
+
+    dopm (设备的model name)目录层数5，每层目录10，总文件200
+    ├── home-config.js (设备配置文件 用于配置首页展示的设备信息)必须有
+    ├── app.html （入口文件，文件名必须使用app.html用于打包）必须有
+    ├── app.js （入口JS文件，文件名必须使用app.js用于打包js文件）必须有
+    ├── css 
+    │   ├── private.css 
+    │   ... xxx.css
+    ├── js
+    │   ├── private.js 
+    │   ... xx...js
+    ├── b
+    │   ├── js
+    │   ... app.html
+    │   ... app.js
+    │   ├──css
+
+attr_name传感器模板中的属性
+
+vaule_enum属性枚举展示值
+
+unit 属性展示单位
+
+nick_name属性前端展示值
+
+例子：
+
+    var config =[
+        {
+            "attr_name":"属性名1",
+            "value_enum":{"1":"test","2":"test1"},
+            "unit":"℃",
+            "nick_name":"展示名称"
+        },
+        {
+            "attr_name":"属性名1",
+            "value_enum":{"1":"test","2":"test1"},
+            "unit":"℃",
+            "nick_name":"展示名称"
+        }
+    ]
+    
