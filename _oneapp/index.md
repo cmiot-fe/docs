@@ -17,11 +17,11 @@ JSSDK开发者在开发和物APP的设备操作界面所用到的sdk，通过JSS
 
 <h4 id="jsbind">jsSDK引入地址</h4>
 
-    http://appapi.heclouds.com/sdk/ojs-2.0.1.min.js
+    //appapi.heclouds.com/sdk/ojs-2.0.1.min.js
 
 <h4 id="cssbind">css引入地址（可不引入，即只在使用showOfflineMask方法的时候需要引入）</h4>
 
-    http://appapi.heclouds.com/sdk/ojs.min.css?v=1.0 
+    //appapi.heclouds.com/sdk/ojs.min.css?v=1.0 
 
 `注意事项`
 
