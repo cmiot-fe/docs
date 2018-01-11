@@ -107,7 +107,7 @@ sensorName如为字符串则获取一个传感器的值，sensorName若为数组
 
 修改顶部导航栏及标题
 
-    OJS.app.navigationConfig(title, background, color)
+<h3 id="OJSnavigationConfig">OJS.app.navigationConfig(title, background, color)</h3>
 
 * title: 标题文字
 * background: 背景颜色，目前仅支持hex颜色（`#ffffff`）
