@@ -8,13 +8,18 @@
 
 JSSDK开发者在开发和物APP的设备操作界面所用到的sdk，通过JSSDK可以调用设备的各种数据、调用原生的手机api，向设备发送命令。
 
+### 2.0.1更新概要
+* 增加了导航栏标题与背景色的自定义方法;
+* 增加了设备断网处理
+
+
 # 引入方式
 
 <h4 id="jsbind">jsSDK引入地址</h4>
 
-    http://appapi.heclouds.com/sdk/ojs.min.js?v=1.0.2
+    http://appapi.heclouds.com/sdk/ojs-2.0.1.min.js
 
-<h4 id="cssbind">css引入地址</h4>
+<h4 id="cssbind">css引入地址（可不引入，即只在使用showOfflineMask方法的时候需要引入）</h4>
 
     http://appapi.heclouds.com/sdk/ojs.min.css?v=1.0 
 
@@ -100,6 +105,15 @@ sensorName如为字符串则获取一个传感器的值，sensorName若为数组
 
 调用UI的时候需要在bindAppReady后才能调用成功
 
+修改顶部导航栏及标题
+
+    OJS.app.navigationConfig(title, background, color)
+
+* title: 标题文字
+* background: 背景颜色，目前仅支持hex颜色（`#ffffff`）
+* color: 字体颜色：浅色或者深色`light | dark`
+
+
 <h3 id="OJSapphasNetWork">OJS.app.hasNetWork(callback)</h3>
 
 判断当前手机是否有网络
@@ -134,13 +148,19 @@ sensorName如为字符串则获取一个传感器的值，sensorName若为数组
 
 # UI
 
-<h3 id="OJSUIshowNotOnlineMask">OJS.ui.showOfflineMask()</h3>
+传递true或者false，显示设备断网详情(ojs会在设备不在线的时候主动调用)
+
+    OJS.ui.onlineStatus()
 
 显示设备断网遮罩层
 
-<h3 id="OJS.UI.hideNotOnlineMask">OJS.ui.hideOfflineMask()</h3>
+    OJS.ui.showOfflineMask()
 
 隐藏设备断网遮罩层
+
+    OJS.ui.hideOfflineMask()
+
+
 
 # 通知下发
 
