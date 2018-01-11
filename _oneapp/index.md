@@ -105,9 +105,11 @@ sensorName如为字符串则获取一个传感器的值，sensorName若为数组
 
 调用UI的时候需要在bindAppReady后才能调用成功
 
+<h3 id="OJSnavigationConfig">OJS.app.navigationConfig(title, background, color)</h3>
+
 修改顶部导航栏及标题
 
-<h3 id="OJSnavigationConfig">OJS.app.navigationConfig(title, background, color)</h3>
+    OJS.app.navigationConfig(title, background, color)
 
 * title: 标题文字
 * background: 背景颜色，目前仅支持hex颜色（`#ffffff`）
@@ -120,7 +122,6 @@ sensorName如为字符串则获取一个传感器的值，sensorName若为数组
 
     OJS.app.hasNetWork(function(data){debug(data ? '当前有网络' : '当前无网络')})
 
-<h3 id="OJSUInavigationConfig">OJS.app.navigationConfig() 暂未实现</h3>
 
 配置顶部导航按钮（内容包括：返回键、更多）
 
