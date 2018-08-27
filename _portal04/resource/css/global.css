@@ -5,14 +5,16 @@ body{
     -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=95);
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=95);
     min-width: 1200px;
+    padding: 0;
+    margin: 0;
 }
 a {
     font-size: 14px;
     text-decoration: none;
     color: #19bbff;
-    &:hover {
-        color: #40d8ff;
-    }
+}
+a:hover {
+    color: #40d8ff;
 }
 /************************************pager**************************************/
 .portal-pager {
