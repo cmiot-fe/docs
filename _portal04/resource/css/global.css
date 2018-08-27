@@ -1,3 +1,19 @@
+body{
+    font-family: 'pingfang SC','helvetica neue',arial,'hiragino sans gb','microsoft yahei ui','microsoft yahei',simsun,sans-serif;
+    background-color: #f3f6f9;
+    opacity: .95;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=95);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=95);
+    min-width: 1200px;
+}
+a {
+    font-size: 14px;
+    text-decoration: none;
+    color: #19bbff;
+    &:hover {
+        color: #40d8ff;
+    }
+}
 /************************************pager**************************************/
 .portal-pager {
     text-align: center;
