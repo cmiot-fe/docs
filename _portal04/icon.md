@@ -184,4 +184,10 @@
     <blockquote>
     <p>"iconfont"是你项目下的font-family。可以通过编辑项目查看，默认是"iconfont"。</p>
     </blockquote>
+    <h2 id="font-class-">添加图标方法</h2>
+    <h3 id="-fontclass-">第一步：加入项目：</h3>
+    <span>该图标为阿里图标库，需登录http://www.iconfont.cn/，并把昵称告知高宇，等待他加入项目后，可以在该网站的图标库中查看，即可以上传</span>
+    <h3 id="-fontclass-">第二步：上传svg图标：</h3>
+    <span><img src="resource/file/icon-example.png"/></span>
+    <hr>
 </div>
