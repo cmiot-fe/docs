@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>
+        {{ page.title }}
+    </title>
+    <link href="resource/css/global.css" rel="stylesheet">
+    <link href="resource/css/font/iconfont.css" rel="stylesheet">
+    {{ page.extcss }}
+</head>
+<body>
+<div class="header" style="background-color: #000000;">
+    <div class="header-body">
+        <a href="#" class="header-logo"></a>
+        <div class="header-menu">
+            <ul class="header-menu-ul">
+                <li class="header-menu-ul-li type-2">
+                    <a href="header.html" class="header-menu-a">
+                        <span>Header</span>
+                    </a>
+                </li>
+                <li class="header-menu-ul-li type-2">
+                    <a href="footer.html" class="header-menu-a">
+                        <span>Footer</span>
+                    </a>
+                </li>
+                <li class="header-menu-ul-li type-1">
+                    <a href="icon.html" class="header-menu-a">
+                        <span>Icon</span>
+                    </a>
+                </li>
+                <li class="header-menu-ul-li">
+                    <a href="pager.html" class="header-menu-a">
+                        <span>Pager</span>
+                    </a>
+                </li>
+                <li class="header-menu-ul-li">
+                    <a href="suspension.html" class="header-menu-a">
+                        <span>Suspension</span>
+                    </a>
+                </li>
+                <li class="header-menu-ul-li">
+                    <a href="table.html" class="header-menu-a">
+                        <span>Table</span>
+                    </a>
+                </li>
+                <li class="header-menu-ul-li">
+                    <a href="swiper.html" class="header-menu-a">
+                        <span>Swiper</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div id="main" class="grid doc-detail">
+    {{ content }}
+</div>
+<script type="text/javascript" src="resource/js/pager.js"></script>
+<script src="resource/js/jquery-1.11.1.min.js"></script>
+<script src="resource/js/global.js"></script>
+<script src="resource/js/prettify.js"></script>
+
+<script>
+    (function(){
+        $(function() {
+            $('pre').addClass('prettyprint');
+            prettyPrint();
+        });
+    })();
+</script>
+{{ page.extjs }}
+</body>
+</html>
