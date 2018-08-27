@@ -147,7 +147,7 @@ a:hover {
 }
 .header .header-body .header-logo {
     display: inline-block;
-    background: url(/v4/static/common/file/logo.png) no-repeat;
+    background: url(../file/logo.png) no-repeat;
     width: 143px;
     height: 28px;
     background-size: contain;
@@ -447,7 +447,7 @@ a:hover {
     color: #ffffff;
 }
 .header .header-body .header-user .header-develop > a .header-developer-icon {
-    background: url(/v4/static/common/file/developer-center.png) no-repeat;
+    background: url(../file/developer-center.png) no-repeat;
     background-size: contain;
     width: 20px;
     height: 20px;
@@ -522,7 +522,7 @@ a:hover {
     margin-bottom: 20px;
 }
 .footer .footer-body .footer-body-content > div.footer-body-content-qrcode .footer-b-c-b-r {
-    background: url(/v4/static/common/file/qrcode.png) no-repeat;
+    background: url(../file/qrcode.png) no-repeat;
     background-size: contain;
     width: 113px;
     height: 113px;
@@ -547,7 +547,7 @@ a:hover {
     border-top: 1px solid #515258;
 }
 .footer .footer-body .footer-body-lang .footer-body-lang-icon {
-    background: url(/v4/static/common/file/footer-lang-icon.png) no-repeat;
+    background: url(../file/footer-lang-icon.png) no-repeat;
     height: 28px;
     width: 28px;
     background-size: contain;
