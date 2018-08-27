@@ -1,3 +1,7 @@
+---
+  layout: portal04
+  title: OneNET 4.0 UI standards
+---
 <div class="footer">
     <div class="footer-body">
         <div class="footer-body-content">
@@ -45,7 +49,7 @@
                             <a target="_blank" href="http://iotchinamobile.zhiye.com/social?r=-1&p=&c=&d=&k=%E5%BC%80%E6%94%BE%E5%B9%B3%E5%8F%B0%E9%83%A8">加入我们</a>
                         </li>
                         <li class="footer-b-c-u-l">
-                            <a href="#"><img src="./file/footer-cloud.svg" class="footer-b-c-u-l-i"/>可信云认证</a>
+                            <a href="#"><img src="resource/file/footer-cloud.svg" class="footer-b-c-u-l-i"/>可信云认证</a>
                         </li>
                     </ul>
                 </div>
@@ -106,3 +110,6 @@
         </div>
     </div>
 </div>
+<p style="margin-top: 40px;">smarty引入方法：</p>
+<pre><code class="lang-js hljs html"><span class="hljs-comment">include file="../common/footer.tpl" usetype='usercenter'</span></code></pre>
+<p>参数usetype：要么不传，要么就传usercenter，为usercenter时则显示为用户中心的样式</p>

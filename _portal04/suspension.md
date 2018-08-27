@@ -1,3 +1,8 @@
+---
+  layout: portal04
+  title: OneNET 4.0 UI standards
+---
+<div style="height: 950px;">这里面的都是内容，滑动可以看到置顶按钮</div>
 <div class="suspension">
     <div class="suspension-top">
         <div class="suspension-item">
@@ -22,3 +27,7 @@
         <i class="iconfont icon-backtop"></i>
     </div>
 </div>
+<p style="margin-top: 40px;">smarty引入方法：</p>
+``` html
+    include file="../common/suspension.tpl"
+```

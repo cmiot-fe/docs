@@ -1,57 +1,56 @@
+---
+  layout: portal04
+  title: OneNET 4.0 UI standards
+---
 <div class="header" style="background-color: #000000;">
     <div class="header-body">
         <a href="#" class="header-logo"></a>
         <div class="header-menu">
             <ul class="header-menu-ul">
-                <li data-index="1" class="header-menu-ul-li type-2">
-                    <a href="header.html" class="header-menu-a">
-                        <span>Header</span>
-                    </a>
+                <li data-index="1" class="header-menu-ul-li type-2 active">
+                    <span>产品服务</span>
                 </li>
                 <li data-index="2" class="header-menu-ul-li type-2">
-                    <a href="footer.html" class="header-menu-a">
-                        <span>Footer</span>
-                    </a>
+                    <span>解决方案</span>
                 </li>
-                <li class="header-menu-ul-li type-1">
-                    <a href="icon.html" class="header-menu-a">
-                        <span>Icon</span>
+                <li data-index="3" class="header-menu-ul-li type-1">
+                    <span>合作伙伴</span>
+                </li>
+                <li class="header-menu-ul-li">
+                    <a href="#" class="header-menu-a">
+                        <span>开发文档</span>
                     </a>
                 </li>
                 <li class="header-menu-ul-li">
-                    <a href="pager.html" class="header-menu-a">
-                        <span>Pager</span>
-                    </a>
-                </li>
-                <li class="header-menu-ul-li">
-                    <a href="suspension.html" class="header-menu-a">
-                        <span>Suspension</span>
-                    </a>
-                </li>
-                <li class="header-menu-ul-li">
-                    <a href="table.html" class="header-menu-a">
-                        <span>Table</span>
-                    </a>
-                </li>
-                <li class="header-menu-ul-li">
-                    <a href="swiper.html" class="header-menu-a">
-                        <span>Swiper</span>
+                    <a href="#" class="header-menu-a">
+                        <span>物联工场</span>
                     </a>
                 </li>
             </ul>
             <div class="header-menu-li-menu">
                 <ul class="header-menu-li-menu-1">
-                    <li><a href="#">不用点</a></li>
-                    <li><a href="#">不用点</a></li>
-                    <li><a href="#">不用点</a></li>
-                    <li><a href="#">不用点</a></li>
-                    <li><a href="#">不用点</a></li>
-                    <li><a href="#">不用点</a></li>
+                    <li><a href="#">MQTT产品开发套件</a></li>
+                    <li><a href="#">NB-IoT产品开发套件</a></li>
+                    <li><a href="#">OneNET开发板</a></li>
+                    <li><a href="#">中移和物</a></li>
+                    <li><a href="#">轻应用平台</a></li>
+                    <li><a href="#">视频能力</a></li>
                 </ul>
                 <ul class="header-menu-li-menu-2">
-                    <li><a href="#">不用点</a></li>
-                    <li><a href="#">不用点</a></li>
-                    <li><a href="#">不用点</a></li>
+                    <li><a href="#">都市消防解决方案</a></li>
+                    <li><a href="#">畜牧物联网解决方案</a></li>
+                    <li><a href="#">智慧停车解决方案</a></li>
+                    <li><a href="#">智慧井盖解决方案</a></li>
+                    <li><a href="#">智慧餐厅解决方案</a></li>
+                    <li><a href="#">智慧路灯解决方案</a></li>
+                    <li><a href="#">智慧光伏解决方案</a></li>
+                    <li><a href="#">共享经济解决方案</a></li>
+                    <li><a href="#">光交箱监控解决方案</a></li>
+                    <li><a href="#">扬尘监控解决方</a></li>
+                </ul>
+                <ul class="header-menu-li-menu-3">
+                    <li><a href="#">OCP计划</a></li>
+                    <li class="line"><a href="#">产业联盟</a></li>
                 </ul>
             </div>
         </div>
@@ -100,3 +99,9 @@
         </div>
     </div>
 </div>
+<p style="margin-top: 40px;">smarty引入方法：</p>
+<pre><code class="lang-js hljs html"><span class="hljs-comment">include file="../common/header.tpl" active=2 bc='#000000' usetype='usercenter'</span></code></pre>
+<p>header可以直接引入就可</p>
+<p>参数1：active，为默认选中的配置</p>
+<p>参数2：bc，为Header背景颜色配置</p>
+<p>参数3：usetype，要么不传，要么就传usercenter，为usercenter时则显示为用户中心的样式</p>

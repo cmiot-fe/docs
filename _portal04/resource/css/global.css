@@ -13,8 +13,35 @@ a {
     text-decoration: none;
     color: #19bbff;
 }
+.protal-title{
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 70px;
+}
+a:hover { text-decoration: none !important; }
+ul, p, div, span, label{
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    list-style: none;
+}
 a:hover {
     color: #40d8ff;
+}
+.doc-detail{
+    width: 1200px;
+    margin: 20px auto;
+}
+pre{
+    background-color: #eee;
+    padding: 20px;
+    border-radius: 6px;
+    margin-top: 20px !important;
+}
+p{
+    margin: 10px 0;
 }
 /************************************pager**************************************/
 .portal-pager {
@@ -201,6 +228,10 @@ a:hover {
 }
 .header .header-body .header-menu .header-menu-li-menu ul li a:hover {
     color: #19bbff;
+}
+.header .header-body .header-menu .header-menu-ul{
+    margin: 0;
+    padding: 0;
 }
 .header .header-body .header-menu .header-menu-ul .header-menu-ul-li {
     display: inline-block;
