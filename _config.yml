@@ -9,4 +9,6 @@ collections:
   standards:
       output: true
   oneapp:
-        output: true
+      output: true
+  portal04:
+      output: true
