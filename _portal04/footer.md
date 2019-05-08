@@ -21,16 +21,16 @@
                             <a href="#">何止NB，联合战线全军出击</a>
                         </li>
                         <li class="footer-b-c-u-l">
-                            <a href="#">中国移动成为首家获取GSMA SAS认证的国内运营商</a>
+                            <a href="#">为首家获取GSMA SAS认证的国内运营商</a>
                         </li>
                         <li class="footer-b-c-u-l">
-                            <a href="#">中移动正式发布“安连宝”安全解决方案</a>
+                            <a href="#">发布“安连宝”安全解决方案</a>
                         </li>
                         <li class="footer-b-c-u-l">
                             <a href="#">何止NB，联合战线全军出击</a>
                         </li>
                         <li class="footer-b-c-u-l">
-                            <a href="#">中国移动成为首家获取GSMA SAS认证的国内运营商</a>
+                            <a href="#">家获取GSMA SAS认证的国内运营商</a>
                         </li>
                         <li class="footer-b-c-u-l">
                             <a class="news-more" href="#">查看更多</a>
@@ -46,7 +46,7 @@
                             <a href="#">认识OneNET</a>
                         </li>
                         <li class="footer-b-c-u-l">
-                            <a target="_blank" href="http://iotchinamobile.zhiye.com/social?r=-1&p=&c=&d=&k=%E5%BC%80%E6%94%BE%E5%B9%B3%E5%8F%B0%E9%83%A8">加入我们</a>
+                            <a target="_blank" href="#">加入我们</a>
                         </li>
                         <li class="footer-b-c-u-l">
                             <a href="#"><img src="resource/file/footer-cloud.svg" class="footer-b-c-u-l-i"/>可信云认证</a>
@@ -72,10 +72,10 @@
                 <div class="footer-b-c-b">
                     <ul class="footer-b-c-u">
                         <li class="footer-b-c-u-l">
-                            <span>Q 群：OneNET - 129735447    麒麟开发板 - 562521394</span>
+                            <span>Q 群：    </span>
                         </li>
                         <li class="footer-b-c-u-l">
-                            <span>产业合作：kfptbhezuo@cmiot.chinamobile.com</span>
+                            <span>产业合作：</span>
                         </li>
                         <li class="footer-b-c-u-l">
                             <span>{公司电话：023-81390011</span>
@@ -84,10 +84,10 @@
                             <span>公司传真：023-81390033</span>
                         </li>
                         <li class="footer-b-c-u-l">
-                            <span>公司邮箱：iot_service@cmiot.chinamobile.com</span>
+                            <span>公司邮箱：</span>
                         </li>
                         <li class="footer-b-c-u-l">
-                            <span>公司地址：重庆市渝北区黄杨路渝兴广场D3大楼</span>
+                            <span>公司地址：楼</span>
                         </li>
                     </ul>
                 </div>
@@ -105,8 +105,8 @@
             <a href="#">español</a>                            
         </div>
         <div class="footer-body-copyright">
-            <p>Copyright©1999-2017 中国移动 版权所有</p> 
-            <p>京ICP备05002571号</p>
+            <p>Copyright©1999-2017 权所有</p> 
+            <p></p>
         </div>
     </div>
 </div>
