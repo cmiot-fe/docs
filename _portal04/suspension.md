@@ -1,6 +1,6 @@
 ---
   layout: portal04
-  title: OneNET 4.0 UI standards
+  title:  4.0 UI standards
 ---
 <div style="height: 950px;">这里面的都是内容，滑动可以看到置顶按钮</div>
 <div class="suspension">
@@ -14,8 +14,8 @@
             <span class="item-text">联系我们</span>
             <div class="suspension-contact-content">
                 <div class="contact-content-title">联系我们</div>
-                <div class="contact-content-phone"><i class="iconfont icon-phone"></i>4001100866</div>
-                <div class="contact-content-email"><i class="iconfont icon-email"></i>kfptbhezuo@cmiot.chinamobile.com</div>
+                <div class="contact-content-phone"><i class="iconfont icon-phone"></i></div>
+                <div class="contact-content-email"><i class="iconfont icon-email"></i></div>
             </div>
         </div>
         <div class="suspension-item">
