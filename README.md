@@ -1,6 +1,6 @@
-iotofcmcc.github.io/docs/fe
+xxx.github.io/docs/fe
 ===============
 
-中移物联网设备云团队前端文档库
+团队前端文档库
 
-please visit [http://iotofcmcc.github.io/docs/fe](http://iotofcmcc.github.io/docs/fe)
+please visit [http://xxx.github.io/docs/fe](http://xxx.github.io/docs/fe)
